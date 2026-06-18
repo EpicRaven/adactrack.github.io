@@ -47,7 +47,6 @@
       min-height: 100vh
     }
 
-    /* ── LAYOUT ── */
     #app {
       display: flex;
       min-height: 100vh
@@ -94,7 +93,6 @@
       flex: 1
     }
 
-    /* ── SIDEBAR ── */
     .sb-logo {
       padding: 1.25rem 1rem;
       display: flex;
@@ -203,7 +201,6 @@
       flex-shrink: 0
     }
 
-    /* ── TOPBAR ── */
     .tb-title {
       font-weight: 700;
       font-size: 1rem;
@@ -251,7 +248,6 @@
       border: 1.5px solid #fff
     }
 
-    /* ── SCREENS ── */
     .screen {
       display: none
     }
@@ -260,7 +256,6 @@
       display: block
     }
 
-    /* ── AUTH SCREEN ── */
     #screen-auth {
       display: flex;
       align-items: center;
@@ -346,7 +341,6 @@
       display: block
     }
 
-    /* ── CARDS & GRIDS ── */
     .card {
       background: var(--card);
       border-radius: var(--r);
@@ -415,7 +409,6 @@
       }
     }
 
-    /* ── STAT CARDS ── */
     .stat-card {
       background: var(--card);
       border-radius: var(--r);
@@ -463,7 +456,6 @@
       color: var(--danger)
     }
 
-    /* ── FORMS ── */
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -552,7 +544,6 @@
       letter-spacing: 1px
     }
 
-    /* ── COURSE TABLE ── */
     .ctable {
       width: 100%;
       border-collapse: collapse
@@ -644,7 +635,6 @@
       color: #991b1b
     }
 
-    /* ── GPA BAR ── */
     .gpa-row {
       background: #f0f3fa;
       border: 1px solid var(--border);
@@ -678,7 +668,6 @@
       color: var(--muted)
     }
 
-    /* ── DATA TABLE ── */
     .dt {
       width: 100%;
       border-collapse: collapse;
@@ -731,7 +720,11 @@
       color: var(--danger)
     }
 
-    /* ── BUTTONS ── */
+    .s-draft {
+      background: #f3f4f6;
+      color: #374151
+    }
+
     .btn {
       padding: 8px 18px;
       border: none;
@@ -819,7 +812,6 @@
       flex-wrap: wrap
     }
 
-    /* ── ALERTS ── */
     .alert {
       padding: 10px 14px;
       border-radius: 8px;
@@ -854,7 +846,6 @@
       border: 1px solid #fde68a
     }
 
-    /* ── PAGE HEADER ── */
     .page-hdr {
       display: flex;
       align-items: flex-start;
@@ -882,7 +873,6 @@
       flex-wrap: wrap
     }
 
-    /* ── TABS ── */
     .tab-bar {
       display: flex;
       gap: 4px;
@@ -911,13 +901,11 @@
       box-shadow: 0 1px 4px rgba(0, 0, 0, .1)
     }
 
-    /* ── CHART WRAPPER ── */
     .chart-wrap {
       position: relative;
       height: 220px
     }
 
-    /* ── SEARCH / FILTER BAR ── */
     .filter-bar {
       display: flex;
       gap: 8px;
@@ -933,7 +921,6 @@
       max-width: 220px
     }
 
-    /* ── NOTIF PANEL ── */
     .notif-panel {
       background: #fff;
       border: 1px solid var(--border);
@@ -984,7 +971,6 @@
       margin-right: 6px
     }
 
-    /* ── PROGRESS ── */
     .prog-bar-wrap {
       background: #e5e7eb;
       border-radius: 20px;
@@ -999,7 +985,6 @@
       transition: width .4s
     }
 
-    /* ── SHARE LINK ── */
     .share-input {
       display: flex;
       gap: 6px
@@ -1011,7 +996,6 @@
       font-size: 12px
     }
 
-    /* ── MISC ── */
     .text-center {
       text-align: center
     }
@@ -1110,6 +1094,86 @@
     .sidebar-open .overlay {
       display: block
     }
+
+    /* ── MODAL ── */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .5);
+      z-index: 500;
+      align-items: center;
+      justify-content: center
+    }
+
+    .modal-backdrop.open {
+      display: flex
+    }
+
+    .modal {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 480px;
+      max-width: calc(100vw - 2rem);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .25)
+    }
+
+    .modal-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: .75rem
+    }
+
+    .modal-footer {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+      margin-top: 1rem
+    }
+
+    /* ── WEAK COURSE ALERT ── */
+    .weak-alert {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: .75rem;
+      font-size: 13px;
+      color: #9a3412
+    }
+
+    .weak-alert strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #7c2d12
+    }
+
+    /* ── CHECKBOX ── */
+    .row-check {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      accent-color: var(--navy)
+    }
+
+    .bulk-bar {
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: .75rem;
+      font-size: 13px;
+      display: none
+    }
+
+    .bulk-bar.visible {
+      display: flex
+    }
   </style>
 </head>
 
@@ -1128,7 +1192,6 @@
         <div class="auth-tab" onclick="switchAuthTab('admin')">🔐 Admin</div>
       </div>
       <div class="auth-body">
-        <!-- Student Login -->
         <div id="af-student" class="auth-form active">
           <div style="display:flex;flex-direction:column;gap:11px">
             <div class="fg"><label>User ID</label><input id="sl-uid" placeholder="e.g. CHU21001-77"
@@ -1142,7 +1205,6 @@
               get your User ID</p>
           </div>
         </div>
-        <!-- Admin Login -->
         <div id="af-admin" class="auth-form">
           <div style="display:flex;flex-direction:column;gap:11px">
             <div class="fg"><label>Admin Username</label><input id="al-user" placeholder="admin" value="" /></div>
@@ -1154,10 +1216,55 @@
               Admin →</button>
           </div>
         </div>
-        <!-- Demo Hint -->
         <div class="alert al-info mt" style="font-size:11px">
           💡 <strong>Demo:</strong> Submit a result first to get a User ID, then log in as student. Or use Admin login.
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ REJECT MODAL ═══════════ -->
+  <div class="modal-backdrop" id="reject-modal">
+    <div class="modal">
+      <div class="modal-title">Reject Result</div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:.75rem">Provide a reason — this will be shown to the
+        student.</p>
+      <div class="fg"><label>Reason for Rejection</label>
+        <textarea id="reject-reason" rows="3"
+          placeholder="e.g. Score entry error. Please resubmit with corrected scores."></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost btn-sm" onclick="closeRejectModal()">Cancel</button>
+        <button class="btn btn-danger btn-sm" onclick="confirmReject()">Reject Result</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SHARE MODAL ═══════════ -->
+  <div class="modal-backdrop" id="share-modal">
+    <div class="modal">
+      <div class="modal-title">🔗 Share Transcript Link</div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:.75rem">Generate a secure, time-limited link for your
+        transcript.</p>
+      <div class="form-row cols1" style="margin-bottom:8px">
+        <div class="fg"><label>Link expires after</label>
+          <select id="share-expiry">
+            <option value="1">1 day</option>
+            <option value="7" selected>7 days</option>
+            <option value="30">30 days</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row cols1" style="margin-bottom:8px">
+        <div class="fg"><label>Optional PIN (leave blank for no PIN)</label>
+          <input id="share-pin" type="text" maxlength="6" placeholder="e.g. 1234" />
+        </div>
+      </div>
+      <button class="btn btn-primary btn-sm" onclick="createShareLink()">Generate Link</button>
+      <div id="share-link-result" style="margin-top:.75rem"></div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost btn-sm"
+          onclick="document.getElementById('share-modal').classList.remove('open')">Close</button>
       </div>
     </div>
   </div>
@@ -1166,7 +1273,6 @@
   <div id="app" style="display:none">
     <div class="overlay" onclick="closeSidebar()"></div>
 
-    <!-- SIDEBAR -->
     <nav id="sidebar">
       <div class="sb-logo">
         <div class="sb-logo-mark">A</div>
@@ -1176,7 +1282,6 @@
         </div>
       </div>
 
-      <!-- Student nav -->
       <div id="nav-student">
         <div class="sb-section">
           <div class="sb-label">Student</div>
@@ -1192,7 +1297,6 @@
         </div>
       </div>
 
-      <!-- Admin nav -->
       <div id="nav-admin" class="hidden">
         <div class="sb-section">
           <div class="sb-label">Overview</div>
@@ -1228,7 +1332,6 @@
       </div>
     </nav>
 
-    <!-- MAIN -->
     <div id="main">
       <div id="topbar">
         <div style="display:flex;align-items:center;gap:.75rem">
@@ -1238,12 +1341,11 @@
         <div class="tb-right">
           <span class="role-badge" id="role-badge">Student</span>
           <div class="tb-notif" onclick="toggleNotif()" title="Notifications">
-            🔔<span class="notif-dot" id="notif-indicator"></span>
+            🔔<span class="notif-dot" id="notif-indicator" style="display:none"></span>
           </div>
         </div>
       </div>
 
-      <!-- Notification panel -->
       <div class="notif-panel" id="notif-panel">
         <div class="notif-hdr">Notifications <button class="btn-ghost btn btn-sm" onclick="markAllRead()"
             style="font-size:11px;padding:2px 8px">Mark all read</button></div>
@@ -1264,6 +1366,7 @@
               <button class="btn btn-primary btn-sm" onclick="downloadTranscriptPDF()">⬇ Transcript PDF</button>
             </div>
           </div>
+          <div id="weak-course-alerts"></div>
           <div class="grid-4" style="margin-bottom:1rem" id="student-stats-grid"></div>
           <div class="grid-2">
             <div class="card">
@@ -1303,9 +1406,10 @@
             <div class="page-hdr-actions">
               <button class="btn btn-primary" onclick="downloadTranscriptPDF()">⬇ Download PDF</button>
               <button class="btn btn-gold" onclick="emailTranscript()">✉ Email to Me</button>
-              <button class="btn btn-outline" onclick="genShareLink()">🔗 Share Link</button>
+              <button class="btn btn-outline" onclick="openShareModal()">🔗 Share Link</button>
             </div>
           </div>
+          <div id="action-msg"></div>
           <div id="transcript-body"></div>
         </div>
 
@@ -1354,6 +1458,9 @@
             <div class="form-row cols1">
               <div class="fg"><label>Email Address</label><input id="p-email" type="email" placeholder="Update email" />
               </div>
+            </div>
+            <div class="form-row cols1">
+              <div class="fg"><label>Department</label><input id="p-dept" readonly /></div>
             </div>
             <div class="mt"><button class="btn btn-primary" onclick="saveProfile()">Save Changes</button></div>
             <div id="profile-msg" class="mt"></div>
@@ -1408,7 +1515,6 @@
               <p>Enter student details and course scores</p>
             </div>
           </div>
-
           <div class="card">
             <div class="card-title">Student Information</div>
             <div class="form-row">
@@ -1424,6 +1530,24 @@
                   placeholder="student@university.edu.ng" /></div>
             </div>
             <div class="form-row">
+              <div class="fg"><label>Department</label><input id="s-dept" placeholder="e.g. Computer Science" /></div>
+              <div class="fg"><label>Faculty</label><input id="s-faculty"
+                  placeholder="e.g. Computing & Applied Sciences" /></div>
+            </div>
+            <div class="form-row">
+              <div class="fg"><label>Level</label>
+                <select id="s-level">
+                  <option value="">— Select —</option>
+                  <option>100 Level</option>
+                  <option>200 Level</option>
+                  <option>300 Level</option>
+                  <option>400 Level</option>
+                  <option>500 Level</option>
+                </select>
+              </div>
+              <div class="fg"><label>Phone Number</label><input id="s-phone" placeholder="e.g. 08012345678" /></div>
+            </div>
+            <div class="form-row">
               <div class="fg"><label>Semester</label>
                 <select id="s-sem">
                   <option value="">— Select —</option>
@@ -1431,7 +1555,7 @@
                   <option>Second Semester</option>
                 </select>
               </div>
-              <div class="fg"><label>Academic Session</label><input id="s-session" placeholder="e.g. 2023/2024" /></div>
+              <div class="fg"><label>Academic Session</label><input id="s-session" placeholder="e.g. 2025/2026" /></div>
             </div>
             <div id="uid-wrap" class="hidden mt">
               <label>Auto-generated User ID</label>
@@ -1507,13 +1631,32 @@
                 <option>Approved</option>
                 <option>Rejected</option>
               </select>
+              <select id="mf-level" onchange="renderManageTable()">
+                <option value="">All Levels</option>
+                <option>100 Level</option>
+                <option>200 Level</option>
+                <option>300 Level</option>
+                <option>400 Level</option>
+                <option>500 Level</option>
+              </select>
+            </div>
+            <!-- Bulk action bar -->
+            <div class="bulk-bar" id="bulk-bar">
+              <span id="bulk-count">0 selected</span>
+              <button class="btn btn-success btn-sm" onclick="bulkApprove()">✓ Approve Selected</button>
+              <button class="btn btn-danger btn-sm" onclick="bulkReject()">✕ Reject Selected</button>
+              <button class="btn btn-ghost btn-sm" style="color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.3)"
+                onclick="clearSelection()">Clear</button>
             </div>
             <div style="overflow-x:auto">
               <table class="dt" id="manage-table">
                 <thead>
                   <tr>
+                    <th style="width:36px"><input type="checkbox" id="select-all" class="row-check"
+                        onchange="toggleSelectAll(this)" /></th>
                     <th>Student</th>
                     <th>Matric</th>
+                    <th>Level</th>
                     <th>Semester</th>
                     <th>Session</th>
                     <th>GPA</th>
@@ -1539,8 +1682,8 @@
           <div class="card">
             <div class="card-title">Upload Instructions</div>
             <div class="alert al-info">📋 Your CSV/Excel must have columns: <strong>FullName, MatricNo, RegNo, Email,
-                Semester, Session, CourseCode, CourseTitle, CreditUnits, Score</strong>. One row per course. Multiple
-              rows for same student are merged.</div>
+                Department, Level, Semester, Session, CourseCode, CourseTitle, CreditUnits, Score</strong>. One row per
+              course. Multiple rows for same student are merged.</div>
             <div class="alert al-warn" style="margin-top:0">⚠ Duplicate records (same matric + semester) will be flagged
               before import.</div>
             <div
@@ -1588,6 +1731,10 @@
             <div class="card-title">At-Risk Students (GPA &lt; 2.0)</div>
             <div id="at-risk"></div>
           </div>
+          <div class="card">
+            <div class="card-title">Carry-Over Report (Failed Courses)</div>
+            <div id="carry-over-list"></div>
+          </div>
         </div>
 
         <!-- ══ ADMIN: STUDENTS ══ -->
@@ -1606,6 +1753,14 @@
                 <option>First Semester</option>
                 <option>Second Semester</option>
               </select>
+              <select id="stf-level" onchange="renderStudentsTable()">
+                <option value="">All Levels</option>
+                <option>100 Level</option>
+                <option>200 Level</option>
+                <option>300 Level</option>
+                <option>400 Level</option>
+                <option>500 Level</option>
+              </select>
             </div>
             <div style="overflow-x:auto">
               <table class="dt">
@@ -1613,6 +1768,7 @@
                   <tr>
                     <th>Name</th>
                     <th>Matric</th>
+                    <th>Level</th>
                     <th>Email</th>
                     <th>Session</th>
                     <th>Semesters</th>
@@ -1682,7 +1838,7 @@
                     <th>Actor</th>
                     <th>Action</th>
                     <th>Target</th>
-                    <th>IP / Notes</th>
+                    <th>Notes</th>
                   </tr>
                 </thead>
                 <tbody id="audit-tbody"></tbody>
@@ -1701,6 +1857,28 @@
           </div>
 
           <div class="card">
+            <div class="card-title">University Branding (PDF)</div>
+            <div class="alert al-info">These details appear on official PDF transcripts and result sheets.</div>
+            <div class="form-row">
+              <div class="fg"><label>University Name</label><input id="cfg-uniName"
+                  placeholder="Federal University Oye-Ekiti" /></div>
+              <div class="fg"><label>Faculty / College</label><input id="cfg-faculty"
+                  placeholder="Computing & Applied Sciences" /></div>
+            </div>
+            <div class="form-row">
+              <div class="fg"><label>Department</label><input id="cfg-dept" placeholder="Computer Science" /></div>
+              <div class="fg"><label>Registrar / Signatory Name</label><input id="cfg-registrar"
+                  placeholder="Prof. A. B. Okafor" /></div>
+            </div>
+            <div class="form-row cols1">
+              <div class="fg"><label>PDF Watermark Text</label><input id="cfg-watermark"
+                  placeholder="OFFICIAL DOCUMENT" /></div>
+            </div>
+            <button class="btn btn-primary btn-sm mt" onclick="saveBranding()">Save Branding</button>
+            <div id="branding-msg" class="mt"></div>
+          </div>
+
+          <div class="card">
             <div class="card-title">Google Sheets Integration</div>
             <div class="alert al-info">Follow the steps below to enable real data storage and retrieval via Google Apps
               Script.</div>
@@ -1715,7 +1893,7 @@
                   </div>
                   <div style="font-size:12px;color:var(--muted)">Go to sheets.google.com, create a new sheet, and add
                     these headers in Row 1:<br><code
-                      style="background:#eef0f8;padding:2px 6px;border-radius:4px;font-size:11px">Timestamp | UserID | FullName | MatricNo | RegNo | Email | Semester | Session | Courses_JSON | GPA | GradeClass | Status | SubmittedBy</code>
+                      style="background:#eef0f8;padding:2px 6px;border-radius:4px;font-size:11px">Timestamp | UserID | FullName | MatricNo | RegNo | Email | Department | Level | Semester | Session | Courses_JSON | GPA | GradeClass | Status | SubmittedBy</code>
                   </div>
                 </div>
               </div>
@@ -1735,13 +1913,13 @@
                     const SH="Sheet1";
                     function doPost(e){const
                     s=SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SH),d=JSON.parse(e.postData.contents);s.appendRow([new
-                    Date().toISOString(),d.userID,d.fullName,d.matricNo,d.regNo,d.email,d.semester,d.session,JSON.stringify(d.courses),d.gpa,d.gradeClass,"Pending",d.submittedBy]);return
+                    Date().toISOString(),d.userID,d.fullName,d.matricNo,d.regNo,d.email,d.department||'',d.level||'',d.semester,d.session,JSON.stringify(d.courses),d.gpa,d.gradeClass,"Pending",d.submittedBy]);return
                     out({status:"ok"})}
                     function doGet(e){const
-                    s=SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SH),rows=s.getDataRange().getValues(),uid=(e.parameter.uid||"").trim().toUpperCase(),mat=(e.parameter.mat||"").trim().toUpperCase(),sem=e.parameter.sem||"",all=e.parameter.all==="1";const
-                    match=rows.slice(1).filter(r=>String(r[1]).toUpperCase()===uid&&String(r[3]).toUpperCase()===mat&&(all||String(r[6])===sem));if(!match.length)return
+                    s=SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SH),rows=s.getDataRange().getValues(),uid=(e.parameter.uid||"").trim().toUpperCase(),mat=(e.parameter.mat||"").trim().toUpperCase(),all=e.parameter.all==="1";const
+                    match=rows.slice(1).filter(r=>String(r[1]).toUpperCase()===uid&&String(r[3]).toUpperCase()===mat);if(!match.length)return
                     out({status:"not_found"});return
-                    out({status:"ok",records:match.map(r=>({userID:r[1],fullName:r[2],matricNo:r[3],regNo:r[4],email:r[5],semester:r[6],session:r[7],courses:JSON.parse(r[8]||"[]"),gpa:r[9],gradeClass:r[10],status:r[11]}))})}
+                    out({status:"ok",records:match.map(r=>({userID:r[1],fullName:r[2],matricNo:r[3],regNo:r[4],email:r[5],department:r[6],level:r[7],semester:r[8],session:r[9],courses:JSON.parse(r[10]||"[]"),gpa:r[11],gradeClass:r[12],status:r[13]}))})}
                     function out(d){return
                     ContentService.createTextOutput(JSON.stringify(d)).setMimeType(ContentService.MimeType.JSON)}</div>
                   <button class="btn btn-outline btn-sm mt" onclick="copyScript()">📋 Copy Script</button>
@@ -1767,8 +1945,7 @@
           <div class="card">
             <div class="card-title">Email (EmailJS)</div>
             <div class="alert al-info" style="margin-bottom:.75rem">Create a free account at
-              <strong>emailjs.com</strong> to enable result emails.
-            </div>
+              <strong>emailjs.com</strong> to enable result emails.</div>
             <div class="form-row cols3">
               <div class="fg"><label>Service ID</label><input id="ej-svc" placeholder="service_xxx" /></div>
               <div class="fg"><label>Template ID</label><input id="ej-tpl" placeholder="template_xxx" /></div>
@@ -1783,16 +1960,18 @@
             <div class="btn-row">
               <button class="btn btn-outline" onclick="exportAllCSV()">⬇ Export All Data (CSV)</button>
               <button class="btn btn-outline" onclick="backupData()">💾 Backup to JSON</button>
+              <button class="btn btn-outline" onclick="restoreFromJSON()">📂 Restore from JSON</button>
               <button class="btn btn-danger"
-                onclick="if(confirm('Delete ALL demo data? This cannot be undone.'))clearAllData()">🗑 Clear Demo
+                onclick="if(confirm('Delete ALL data? This cannot be undone.'))clearAllData()">🗑 Clear All
                 Data</button>
             </div>
+            <input type="file" id="restore-file" accept=".json" class="hidden" onchange="handleRestore(event)" />
           </div>
         </div>
 
-      </div><!-- /content -->
-    </div><!-- /main -->
-  </div><!-- /app -->
+      </div>
+    </div>
+  </div>
 
   <!-- ══════════════════════ JAVASCRIPT ══════════════════════ -->
   <script>
@@ -1819,102 +1998,110 @@
     let Session = { role: null, user: null, currentStudent: null };
     let Charts = {};
     let rowCount = 0;
+    let _rejectTarget = { uid: null, sem: null };
 
-    // ── Load / Save ──
     function saveDB() { localStorage.setItem('AT_DB', JSON.stringify(DB)) }
     function loadDB() {
       const d = localStorage.getItem('AT_DB');
       if (d) DB = JSON.parse(d);
       if (!DB.courses || !DB.courses.length) {
         DB.courses = [
-          { code: 'CSC 301', title: 'Data Structures', units: 3 },
-          { code: 'CSC 302', title: 'Computer Architecture', units: 3 },
-          { code: 'MTH 301', title: 'Numerical Methods', units: 3 },
-          { code: 'CSC 303', title: 'Operating Systems', units: 3 },
-          { code: 'CSC 304', title: 'Database Systems', units: 3 },
-          { code: 'STA 301', title: 'Probability Theory', units: 2 },
+          { code: 'CSC 101', title: 'Introduction to Computing', units: 3 },
+          { code: 'CSC 102', title: 'Computer Programming I', units: 3 },
+          { code: 'CSC 103', title: 'Discrete Mathematics', units: 3 },
+          { code: 'CSC 201', title: 'Data Structures & Algorithms', units: 3 },
+          { code: 'CSC 202', title: 'Computer Architecture', units: 3 },
+          { code: 'MTH 101', title: 'Elementary Mathematics I', units: 3 },
+          { code: 'MTH 102', title: 'Elementary Mathematics II', units: 3 },
+          { code: 'CSC 301', title: 'Operating Systems', units: 3 },
+          { code: 'CSC 302', title: 'Database Systems', units: 3 },
+          { code: 'CSC 303', title: 'Software Engineering', units: 3 },
+          { code: 'STA 201', title: 'Probability & Statistics', units: 2 },
         ];
       }
       if (!DB.auditLog) DB.auditLog = [];
       if (!DB.notifications) DB.notifications = [];
-      // Seed demo data if empty
       if (!DB.results.length) { seedDemo() }
       saveDB();
     }
 
     function seedDemo() {
-      const rec1 = {
-        userID: 'CHU21001-77', fullName: 'Chukwuemeka Obi', matricNo: 'CSC/2021/001',
-        regNo: '2021/1/12345CS', email: 'emeka@university.edu.ng',
-        semester: 'First Semester', session: '2023/2024',
-        courses: [
-          { code: 'CSC 301', title: 'Data Structures', units: 3, score: 78, grade: 'A', point: '5.0' },
-          { code: 'CSC 302', title: 'Computer Architecture', units: 3, score: 65, grade: 'B', point: '4.0' },
-          { code: 'MTH 301', title: 'Numerical Methods', units: 3, score: 52, grade: 'C', point: '3.0' },
-          { code: 'CSC 303', title: 'Operating Systems', units: 3, score: 70, grade: 'A', point: '5.0' },
-          { code: 'STA 301', title: 'Probability Theory', units: 2, score: 45, grade: 'D', point: '2.0' },
-        ],
-        gpa: '4.14', gradeClass: '2nd Class Upper', status: 'Approved',
-        timestamp: new Date(Date.now() - 7 * 86400000).toISOString(), submittedBy: 'Admin'
+      const mk = (uid, name, mat, reg, email, sem, sess, courses, dept, level) => {
+        const tu = courses.reduce((a, c) => a + c.units, 0);
+        const tp = courses.reduce((a, c) => a + c.point * c.units, 0);
+        const gpa = (tp / tu).toFixed(2);
+        return {
+          userID: uid, fullName: name, matricNo: mat, regNo: reg, email, department: dept, level,
+          semester: sem, session: sess, courses, gpa, gradeClass: gpaClass(parseFloat(gpa)),
+          status: 'Approved', timestamp: new Date(Date.now() - 7 * 86400000).toISOString(), submittedBy: 'Admin'
+        };
       };
-      const rec2 = {
-        userID: 'CHU21001-77', fullName: 'Chukwuemeka Obi', matricNo: 'CSC/2021/001',
-        regNo: '2021/1/12345CS', email: 'emeka@university.edu.ng',
-        semester: 'Second Semester', session: '2023/2024',
-        courses: [
-          { code: 'CSC 304', title: 'Database Systems', units: 3, score: 82, grade: 'A', point: '5.0' },
-          { code: 'CSC 305', title: 'Software Engineering', units: 3, score: 74, grade: 'A', point: '5.0' },
-          { code: 'MTH 302', title: 'Linear Algebra', units: 3, score: 58, grade: 'C', point: '3.0' },
-          { code: 'CSC 306', title: 'Web Technologies', units: 3, score: 68, grade: 'B', point: '4.0' },
-        ],
-        gpa: '4.25', gradeClass: '2nd Class Upper', status: 'Approved',
-        timestamp: new Date(Date.now() - 2 * 86400000).toISOString(), submittedBy: 'Admin'
-      };
-      const rec3 = {
-        userID: 'ADE20002-33', fullName: 'Adebimpe Fashola', matricNo: 'CSC/2020/002',
-        regNo: '2020/1/11234CS', email: 'ade@university.edu.ng',
-        semester: 'First Semester', session: '2023/2024',
-        courses: [
-          { code: 'CSC 301', title: 'Data Structures', units: 3, score: 90, grade: 'A', point: '5.0' },
-          { code: 'CSC 302', title: 'Computer Architecture', units: 3, score: 88, grade: 'A', point: '5.0' },
-          { code: 'MTH 301', title: 'Numerical Methods', units: 3, score: 75, grade: 'A', point: '5.0' },
-        ],
-        gpa: '5.00', gradeClass: '1st Class Honours', status: 'Approved',
-        timestamp: new Date(Date.now() - 5 * 86400000).toISOString(), submittedBy: 'Admin'
-      };
-      const rec4 = {
-        userID: 'OKO22003-52', fullName: 'Okoro Emeka', matricNo: 'CSC/2022/003',
-        regNo: '2022/1/13456CS', email: 'okoro@university.edu.ng',
-        semester: 'First Semester', session: '2023/2024',
-        courses: [
-          { code: 'CSC 301', title: 'Data Structures', units: 3, score: 38, grade: 'F', point: '0.0' },
-          { code: 'CSC 302', title: 'Computer Architecture', units: 3, score: 42, grade: 'E', point: '1.0' },
-          { code: 'MTH 301', title: 'Numerical Methods', units: 3, score: 45, grade: 'D', point: '2.0' },
-        ],
-        gpa: '1.00', gradeClass: 'Fail', status: 'Pending',
-        timestamp: new Date().toISOString(), submittedBy: 'Admin'
-      };
-      DB.results.push(rec1, rec2, rec3, rec4);
+      const g = s => { const r = scoreToGrade(s); return { ...r, grade: r.letter, point: r.point } };
+      DB.results.push(
+        mk('CHU21001-77', 'Chukwuemeka Obi', 'CSC/2021/001', '2021/1/12345CS', 'emeka@fuoye.edu.ng', 'First Semester', '2024/2025', [
+          { code: 'CSC 301', title: 'Operating Systems', units: 3, score: 78, ...g(78) },
+          { code: 'CSC 302', title: 'Database Systems', units: 3, score: 65, ...g(65) },
+          { code: 'MTH 301', title: 'Numerical Methods', units: 3, score: 52, ...g(52) },
+          { code: 'CSC 303', title: 'Software Engineering', units: 3, score: 70, ...g(70) },
+          { code: 'STA 301', title: 'Probability Theory', units: 2, score: 45, ...g(45) },
+        ], 'Computer Science', '300 Level'),
+        mk('CHU21001-77', 'Chukwuemeka Obi', 'CSC/2021/001', '2021/1/12345CS', 'emeka@fuoye.edu.ng', 'Second Semester', '2024/2025', [
+          { code: 'CSC 304', title: 'Computer Networks', units: 3, score: 82, ...g(82) },
+          { code: 'CSC 305', title: 'Compiler Construction', units: 3, score: 74, ...g(74) },
+          { code: 'MTH 302', title: 'Linear Algebra', units: 3, score: 58, ...g(58) },
+          { code: 'CSC 306', title: 'Web Technologies', units: 3, score: 68, ...g(68) },
+        ], 'Computer Science', '300 Level'),
+        mk('ADE20002-33', 'Adebimpe Fashola', 'CSC/2020/002', '2020/1/11234CS', 'ade@fuoye.edu.ng', 'First Semester', '2024/2025', [
+          { code: 'CSC 301', title: 'Operating Systems', units: 3, score: 90, ...g(90) },
+          { code: 'CSC 302', title: 'Database Systems', units: 3, score: 88, ...g(88) },
+          { code: 'MTH 301', title: 'Numerical Methods', units: 3, score: 75, ...g(75) },
+        ], 'Computer Science', '400 Level'),
+        {
+          ...mk('OKO22003-52', 'Okoro Emeka', 'CSC/2022/003', '2022/1/13456CS', 'okoro@fuoye.edu.ng', 'First Semester', '2024/2025', [
+            { code: 'CSC 101', title: 'Introduction to Computing', units: 3, score: 38, ...g(38) },
+            { code: 'CSC 102', title: 'Computer Programming I', units: 3, score: 42, ...g(42) },
+            { code: 'MTH 101', title: 'Elementary Mathematics I', units: 3, score: 45, ...g(45) },
+          ], 'Computer Science', '200 Level'), status: 'Pending'
+        }
+      );
       DB.notifications.push(
-        { id: 1, text: 'Your First Semester 2023/2024 result has been approved.', time: new Date(Date.now() - 6 * 86400000).toISOString(), read: false, uid: 'CHU21001-77' },
-        { id: 2, text: 'Second Semester result is now available.', time: new Date(Date.now() - 1 * 86400000).toISOString(), read: false, uid: 'CHU21001-77' }
+        { id: 1, text: 'Your First Semester 2024/2025 result has been approved.', time: new Date(Date.now() - 6 * 86400000).toISOString(), read: false, uid: 'CHU21001-77' },
+        { id: 2, text: 'Second Semester result is now available.', time: new Date(Date.now() - 86400000).toISOString(), read: false, uid: 'CHU21001-77' }
       );
       addAudit('System', 'Demo data seeded', 'All records', '—');
     }
 
     function addAudit(actor, action, target, note) {
       DB.auditLog.unshift({ time: new Date().toISOString(), actor, action, target, note });
-      if (DB.auditLog.length > 200) DB.auditLog.pop();
+      if (DB.auditLog.length > 500) DB.auditLog.pop();
       saveDB();
     }
 
     // ════ CONFIG ════
-    let CFG = { gsURL: '', ejsSvc: '', ejsTpl: '', ejsKey: '' };
+    let CFG = { gsURL: '', ejsSvc: '', ejsTpl: '', ejsKey: '', uniName: '', faculty: '', dept: '', registrar: '', watermark: 'OFFICIAL DOCUMENT' };
     function loadCFG() {
       CFG.gsURL = localStorage.getItem('AT_GS_URL') || '';
       CFG.ejsSvc = localStorage.getItem('AT_EJS_SVC') || '';
       CFG.ejsTpl = localStorage.getItem('AT_EJS_TPL') || '';
       CFG.ejsKey = localStorage.getItem('AT_EJS_KEY') || '';
+      CFG.uniName = localStorage.getItem('AT_UNI_NAME') || '';
+      CFG.faculty = localStorage.getItem('AT_FACULTY') || '';
+      CFG.dept = localStorage.getItem('AT_DEPT') || '';
+      CFG.registrar = localStorage.getItem('AT_REGISTRAR') || '';
+      CFG.watermark = localStorage.getItem('AT_WATERMARK') || 'OFFICIAL DOCUMENT';
+    }
+    function saveBranding() {
+      CFG.uniName = document.getElementById('cfg-uniName').value.trim();
+      CFG.faculty = document.getElementById('cfg-faculty').value.trim();
+      CFG.dept = document.getElementById('cfg-dept').value.trim();
+      CFG.registrar = document.getElementById('cfg-registrar').value.trim();
+      CFG.watermark = document.getElementById('cfg-watermark').value.trim() || 'OFFICIAL DOCUMENT';
+      localStorage.setItem('AT_UNI_NAME', CFG.uniName);
+      localStorage.setItem('AT_FACULTY', CFG.faculty);
+      localStorage.setItem('AT_DEPT', CFG.dept);
+      localStorage.setItem('AT_REGISTRAR', CFG.registrar);
+      localStorage.setItem('AT_WATERMARK', CFG.watermark);
+      showMsg('branding-msg', 'success', '✅ Branding saved.');
     }
 
     // ════ AUTH ════
@@ -1923,18 +2110,15 @@
       document.getElementById('af-student').classList.toggle('active', t === 'student');
       document.getElementById('af-admin').classList.toggle('active', t === 'admin');
     }
-
     function studentLogin() {
       const uid = document.getElementById('sl-uid').value.trim().toUpperCase();
       const mat = document.getElementById('sl-mat').value.trim().toUpperCase();
       if (!uid || !mat) { showMsg('sl-msg', 'error', 'Please enter both User ID and Matric Number.'); return }
-      // Check local DB
       const recs = DB.results.filter(r => r.userID === uid && r.matricNo.toUpperCase() === mat && r.status === 'Approved');
       if (!recs.length) { showMsg('sl-msg', 'error', 'No approved results found. Check your credentials or contact admin.'); return }
       Session = { role: 'student', user: uid, currentStudent: recs[0] };
       startApp('student', recs[0].fullName);
     }
-
     function adminLogin() {
       const u = document.getElementById('al-user').value.trim();
       const p = document.getElementById('al-pass').value;
@@ -1942,11 +2126,8 @@
         Session = { role: 'admin', user: 'admin', currentStudent: null };
         startApp('admin', 'Administrator');
         addAudit('Admin', 'Login', 'System', '—');
-      } else {
-        showMsg('al-msg', 'error', 'Invalid credentials.');
-      }
+      } else { showMsg('al-msg', 'error', 'Invalid credentials.'); }
     }
-
     function startApp(role, name) {
       document.getElementById('screen-auth').style.display = 'none';
       document.getElementById('app').style.display = 'flex';
@@ -1958,11 +2139,10 @@
       const rb = document.getElementById('role-badge');
       rb.textContent = role === 'admin' ? 'Admin' : 'Student';
       rb.className = 'role-badge ' + (role === 'admin' ? 'role-admin' : 'role-student');
-      if (role === 'student') { goto('dashboard'); loadStudentDashboard() }
-      else { goto('admin-dashboard'); loadAdminDashboard() }
+      if (role === 'student') { goto('dashboard'); loadStudentDashboard(); }
+      else { goto('admin-dashboard'); loadAdminDashboard(); }
       updateNotifIndicator();
     }
-
     function logout() {
       Session = { role: null, user: null, currentStudent: null };
       document.getElementById('app').style.display = 'none';
@@ -1977,9 +2157,8 @@
       'performance': 'Performance', 'profile': 'Profile', 'notifications': 'Notifications',
       'admin-dashboard': 'Admin Dashboard', 'submit': 'Submit Results', 'manage-results': 'Manage Results',
       'bulk-upload': 'Bulk Upload', 'analytics': 'Analytics', 'students': 'All Students',
-      'courses': 'Course List', 'audit': 'Audit Log', 'setup': 'Setup', 'admin-students': 'Student Detail'
+      'courses': 'Course List', 'audit': 'Audit Log', 'setup': 'Setup'
     };
-
     function goto(id) {
       document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
       document.querySelectorAll('.sb-item').forEach(s => s.classList.remove('active'));
@@ -1989,7 +2168,6 @@
         if (el.getAttribute('onclick') && el.getAttribute('onclick').includes("'" + id + "'")) el.classList.add('active');
       });
       document.getElementById('page-title').textContent = PAGE_TITLES[id] || id;
-      // lazy-render
       if (id === 'my-results') loadMyResults();
       if (id === 'transcript') loadTranscript();
       if (id === 'performance') loadPerformance();
@@ -2010,74 +2188,69 @@
     function loadStudentDashboard() {
       const uid = Session.user;
       const recs = DB.results.filter(r => r.userID === uid && r.status === 'Approved');
-      if (!recs.length) return;
-      const name = recs[0].fullName;
-      document.getElementById('dash-welcome').textContent = 'Welcome back, ' + name.split(' ')[0] + '!';
-
-      const gpas = recs.map(r => parseFloat(r.gpa));
-      const avgGPA = (gpas.reduce((a, b) => a + b, 0) / gpas.length).toFixed(2);
-      const allCourses = recs.flatMap(r => r.courses);
-      const totalUnits = allCourses.reduce((a, c) => a + parseFloat(c.units), 0);
-      const totalGP = allCourses.reduce((a, c) => a + parseFloat(c.point) * parseFloat(c.units), 0);
-      const cgpa = (totalGP / totalUnits).toFixed(2);
-
-      document.getElementById('student-stats-grid').innerHTML = `
-    ${statCard('📊', 'CGPA', cgpa, gpaClass(cgpa), '—', 'navy')}
-    ${statCard('📚', 'Courses Taken', allCourses.length, 'Across all semesters', '—', 'gold')}
-    ${statCard('🎓', 'Semesters', recs.length, 'Completed', '—', 'green')}
-    ${statCard('✅', 'Pass Rate', Math.round(allCourses.filter(c => c.grade !== 'F' && c.grade !== 'E').length / allCourses.length * 100) + '%', 'Of all courses', '—', 'teal')}
-  `;
-
+      if (!recs.length) {
+        document.getElementById('student-stats-grid').innerHTML = `<div class="alert al-warn" style="grid-column:1/-1">No approved results yet. Results appear here once an admin approves your submission.</div>`;
+        return;
+      }
+      document.getElementById('dash-welcome').textContent = 'Welcome back, ' + recs[0].fullName.split(' ')[0];
+      const allC = recs.flatMap(r => r.courses);
+      const cgpa = parseFloat(calcCGPA(allC));
       const latest = recs[recs.length - 1];
-      document.getElementById('recent-semester-label').textContent = latest.semester + ' ' + latest.session;
-      document.getElementById('recent-result-table').innerHTML = resultTableHTML(latest.courses, false);
-
-      destroyChart('gpa-trend-chart');
-      destroyChart('grade-dist-chart');
+      const totalUnits = allC.reduce((a, c) => a + parseFloat(c.units), 0);
+      const failCount = allC.filter(c => c.grade === 'F' || c.grade === 'E').length;
+      document.getElementById('student-stats-grid').innerHTML = `
+    ${statCard('🎓', 'CGPA', cgpa.toFixed(2), gpaClass(cgpa), '', 'navy')}
+    ${statCard('📊', 'Latest GPA', parseFloat(latest.gpa).toFixed(2), latest.semester, '', 'gold')}
+    ${statCard('📚', 'Total Units', totalUnits, allC.length + ' courses', '', 'green')}
+    ${statCard('⚠️', 'Carry-overs', failCount, failCount ? 'Courses to repeat' : 'Clean record', '', 'warn')}
+  `;
+      // Weak course alerts
+      const weakCourses = allC.filter(c => c.grade === 'F' || c.grade === 'E' || c.grade === 'D');
+      const alertEl = document.getElementById('weak-course-alerts');
+      if (weakCourses.length) {
+        alertEl.innerHTML = `<div class="weak-alert"><strong>⚠️ Attention Required — ${weakCourses.length} course(s) with D/E/F grades</strong>${weakCourses.map(c => `<span style="display:inline-block;margin-right:12px">${c.code}: ${c.score}/100 (${c.grade})</span>`).join('')}</div>`;
+      } else { alertEl.innerHTML = ''; }
+      // Charts
+      destroyChart('gpa-trend-chart'); destroyChart('grade-dist-chart');
       nextTick(() => {
-        drawGPATrend('gpa-trend-chart', recs.map(r => r.semester.replace(' Semester', '')), gpas);
-        const gradeCount = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0 };
-        allCourses.forEach(c => { gradeCount[c.grade] = (gradeCount[c.grade] || 0) + 1 });
-        drawDoughnut('grade-dist-chart', Object.keys(gradeCount), Object.values(gradeCount));
+        drawGPATrend('gpa-trend-chart', recs.map(r => r.semester.replace(' Semester', '')), recs.map(r => parseFloat(r.gpa)));
+        const gc = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0 }; allC.forEach(c => { gc[c.grade] = (gc[c.grade] || 0) + 1 });
+        drawDoughnut('grade-dist-chart', Object.keys(gc), Object.values(gc));
       });
+      // Recent result
+      document.getElementById('recent-semester-label').textContent = `— ${latest.semester} ${latest.session}`;
+      document.getElementById('recent-result-table').innerHTML = resultTableHTML(latest.courses, true);
     }
 
     // ════ MY RESULTS ════
     function loadMyResults() {
       const uid = Session.user;
-      const recs = DB.results.filter(r => r.userID === uid);
+      const recs = DB.results.filter(r => r.userID === uid).sort((a, b) => a.semester.localeCompare(b.semester));
       const tabBar = document.getElementById('semester-tabs');
-      const display = document.getElementById('result-display');
-      if (!recs.length) { display.innerHTML = '<div class="empty-state"><div class="em-icon">📭</div>No results found.</div>'; tabBar.innerHTML = ''; return }
-
-      const tabs = ['All', ...new Set(recs.map(r => r.semester))];
-      tabBar.innerHTML = tabs.map((t, i) => `<button class="tab-btn ${i === 0 ? 'active' : ''}" onclick="filterResults('${t}',this)">${t}</button>`).join('');
-
-      function render(sem) {
-        const filtered = sem === 'All' ? recs : recs.filter(r => r.semester === sem);
-        display.innerHTML = filtered.map(rec => `
+      const sems = ['All', ...new Set(recs.map(r => r.semester))];
+      tabBar.innerHTML = sems.map((s, i) => `<button class="tab-btn${i === 0 ? ' active' : ''}" onclick="filterResults('${s}',this)">${s}</button>`).join('');
+      function render(filter) {
+        const filtered = filter === 'All' ? recs : recs.filter(r => r.semester === filter);
+        document.getElementById('result-display').innerHTML = filtered.length ? filtered.map(rec => `
       <div class="card">
         <div class="card-title">${rec.semester} · ${rec.session}
-          <span class="status-pill s-${rec.status.toLowerCase()}">${rec.status}</span>
-        </div>
-        ${resultTableHTML(rec.courses, true)}
-        <div class="gpa-row" style="margin-top:10px">
-          <div><div style="font-size:11px;color:var(--muted)">SEMESTER GPA</div><div class="gpa-big">${parseFloat(rec.gpa).toFixed(2)}</div></div>
-          <div class="gpa-class">${rec.gradeClass}</div>
-          <div class="gpa-meta">${rec.courses.length} courses · ${rec.courses.reduce((a, c) => a + parseFloat(c.units), 0)} units</div>
-          <div class="btn-row" style="margin-left:auto">
-            <button class="btn btn-primary btn-sm" onclick="downloadSinglePDF('${rec.userID}','${rec.semester}')">⬇ PDF</button>
-            <button class="btn btn-gold btn-sm" onclick="emailSingle('${rec.userID}','${rec.semester}')">✉ Email</button>
-            <button class="btn btn-ghost btn-sm" onclick="copyShareLink('${rec.userID}','${rec.semester}')">🔗 Share</button>
+          <div style="display:flex;gap:6px;align-items:center">
+            <span class="status-pill s-${rec.status.toLowerCase()}">${rec.status}</span>
+            ${rec.status === 'Rejected' && rec.rejectReason ? `<span class="chip" style="background:#fee2e2;color:#991b1b;font-size:11px">Reason: ${rec.rejectReason}</span>` : ''}
+            <button class="btn btn-outline btn-sm" onclick="downloadSinglePDF('${rec.userID}','${rec.semester}')">⬇ PDF</button>
           </div>
         </div>
-      </div>
-    `).join('');
+        ${rec.status === 'Rejected' && rec.rejectReason ? `<div class="alert al-error" style="margin-bottom:.75rem">❌ Rejected: ${rec.rejectReason}</div>` : ''}
+        ${resultTableHTML(rec.courses, false)}
+        <div class="gpa-row" style="margin-top:.75rem">
+          <div><div style="font-size:11px;color:var(--muted)">SEMESTER GPA</div><div class="gpa-big">${parseFloat(rec.gpa).toFixed(2)}</div></div>
+          <div class="gpa-class">${rec.gradeClass}</div>
+        </div>
+      </div>`).join('') : `<div class="empty-state"><div class="em-icon">📭</div>No results for this semester.</div>`;
       }
       render('All');
       window._filterResults = render;
     }
-
     function filterResults(sem, btn) {
       document.querySelectorAll('#semester-tabs .tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -2090,7 +2263,6 @@
       const recs = DB.results.filter(r => r.userID === uid && r.status === 'Approved').sort((a, b) => a.semester.localeCompare(b.semester));
       const body = document.getElementById('transcript-body');
       if (!recs.length) { body.innerHTML = '<div class="empty-state"><div class="em-icon">📭</div>No approved results yet.</div>'; return }
-
       const allC = recs.flatMap(r => r.courses);
       const cgpa = calcCGPA(allC);
       body.innerHTML = `
@@ -2099,6 +2271,7 @@
         <div>
           <div style="font-size:1.1rem;font-weight:800;color:var(--navy)">${recs[0].fullName}</div>
           <div style="font-size:12px;color:var(--muted)">Matric: ${recs[0].matricNo} · Reg: ${recs[0].regNo || '—'} · ${recs[0].email}</div>
+          <div style="font-size:12px;color:var(--muted)">Dept: ${recs[0].department || '—'} · Level: ${recs[0].level || '—'}</div>
         </div>
         <div class="chip" style="background:var(--navy);color:#fff;font-size:13px;padding:6px 16px">CGPA: ${cgpa}</div>
       </div>
@@ -2106,17 +2279,14 @@
         <div style="margin-bottom:1.25rem">
           <div style="font-weight:700;font-size:13px;color:var(--navy2);margin-bottom:6px;padding-bottom:4px;border-bottom:1px solid var(--border)">${rec.semester} · ${rec.session} — GPA: <strong>${parseFloat(rec.gpa).toFixed(2)}</strong> (${rec.gradeClass})</div>
           ${resultTableHTML(rec.courses, true)}
-        </div>
-      `).join('')}
+        </div>`).join('')}
       <div class="gpa-row">
         <div><div style="font-size:11px;color:var(--muted)">CUMULATIVE GPA</div><div class="gpa-big">${cgpa}</div></div>
         <div class="gpa-class">${gpaClass(parseFloat(cgpa))}</div>
         <div class="gpa-meta">${allC.length} total courses · ${allC.reduce((a, c) => a + parseFloat(c.units), 0)} total units</div>
       </div>
-    </div>
-  `;
+    </div>`;
     }
-
     function calcCGPA(courses) {
       if (!courses.length) return '0.00';
       const tu = courses.reduce((a, c) => a + parseFloat(c.units), 0);
@@ -2157,6 +2327,7 @@
       document.getElementById('p-mat').value = rec.matricNo;
       document.getElementById('p-reg').value = rec.regNo || '';
       document.getElementById('p-email').value = rec.email;
+      document.getElementById('p-dept').value = rec.department || '';
     }
     function saveProfile() {
       const email = document.getElementById('p-email').value.trim();
@@ -2180,8 +2351,7 @@
         <div style="font-size:13px;${n.read ? 'color:var(--muted)' : ''}">${n.text}</div>
         <div style="font-size:11px;color:var(--muted);margin-top:2px">${new Date(n.time).toLocaleString()}</div>
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
     }
     function updateNotifIndicator() {
       const uid = Session.user;
@@ -2195,7 +2365,7 @@
         const uid = Session.user;
         const list = document.getElementById('notif-list');
         const notifs = DB.notifications.filter(n => n.uid === uid || Session.role === 'admin').slice(0, 5);
-        list.innerHTML = notifs.length ? notifs.map(n => `<div class="notif-item">${n.read ? '' : ' <span class="notif-dot2"></span>'} ${n.text}<br><span style="color:var(--muted);font-size:10px">${new Date(n.time).toLocaleString()}</span></div>`).join('') : `<div style="padding:1rem;text-align:center;font-size:13px;color:var(--muted)">No notifications</div>`;
+        list.innerHTML = notifs.length ? notifs.map(n => `<div class="notif-item">${n.read ? '' : '<span class="notif-dot2"></span>'} ${n.text}<br><span style="color:var(--muted);font-size:10px">${new Date(n.time).toLocaleString()}</span></div>`).join('') : `<div style="padding:1rem;text-align:center;font-size:13px;color:var(--muted)">No notifications</div>`;
       }
     }
     function markAllRead() {
@@ -2210,99 +2380,154 @@
       const recs = DB.results;
       const students = new Set(recs.map(r => r.matricNo)).size;
       const pending = recs.filter(r => r.status === 'Pending').length;
-      const approved = recs.filter(r => r.status === 'Approved').length;
-      const avgGPA = (recs.filter(r => r.gpa).reduce((a, r) => a + parseFloat(r.gpa), 0) / Math.max(recs.length, 1)).toFixed(2);
-
+      const approved = recs.filter(r => r.status === 'Approved');
+      const avgGPA = (approved.reduce((a, r) => a + parseFloat(r.gpa), 0) / Math.max(approved.length, 1)).toFixed(2);
       document.getElementById('admin-stats-grid').innerHTML = `
     ${statCard('👥', 'Students', students, 'Enrolled', '—', 'navy')}
     ${statCard('📋', 'Total Records', recs.length, 'Submitted', '—', 'gold')}
     ${statCard('⏳', 'Pending', pending, 'Awaiting review', '—', 'warn')}
     ${statCard('📊', 'Avg GPA', avgGPA, 'All approved', '—', 'green')}
   `;
-
-      // Pending table
       const pendRecs = recs.filter(r => r.status === 'Pending');
       document.getElementById('pending-count-badge').textContent = pendRecs.length ? `(${pendRecs.length})` : '';
       document.getElementById('pending-table').innerHTML = pendRecs.length ? `
     <div style="overflow-x:auto"><table class="dt">
-      <thead><tr><th>Student</th><th>Matric</th><th>Semester</th><th>GPA</th><th>Actions</th></tr></thead>
+      <thead><tr><th>Student</th><th>Matric</th><th>Level</th><th>Semester</th><th>GPA</th><th>Actions</th></tr></thead>
       <tbody>${pendRecs.map(r => `
         <tr>
           <td class="fw7">${r.fullName}</td><td class="mono">${r.matricNo}</td>
-          <td>${r.semester}</td><td>${r.gpa}</td>
+          <td>${r.level || '—'}</td><td>${r.semester}</td><td>${r.gpa}</td>
           <td><div class="btn-row">
             <button class="btn btn-success btn-sm" onclick="approveRecord('${r.userID}','${r.semester}')">✓ Approve</button>
-            <button class="btn btn-danger btn-sm" onclick="rejectRecord('${r.userID}','${r.semester}')">✕ Reject</button>
+            <button class="btn btn-danger btn-sm" onclick="openRejectModal('${r.userID}','${r.semester}')">✕ Reject</button>
           </div></td>
         </tr>`).join('')}
       </tbody>
     </table></div>`: '<div class="empty-state" style="padding:1.5rem"><div class="em-icon" style="font-size:1.5rem">✅</div>No pending approvals.</div>';
-
       destroyChart('admin-gpa-chart'); destroyChart('admin-pf-chart');
       nextTick(() => {
-        const approved2 = recs.filter(r => r.status === 'Approved');
         const gpaBuckets = { '< 1.5': 0, '1.5–2.4': 0, '2.5–3.4': 0, '3.5–4.4': 0, '4.5–5.0': 0 };
-        approved2.forEach(r => {
-          const g = parseFloat(r.gpa);
-          if (g < 1.5) gpaBuckets['< 1.5']++;
-          else if (g < 2.5) gpaBuckets['1.5–2.4']++;
-          else if (g < 3.5) gpaBuckets['2.5–3.4']++;
-          else if (g < 4.5) gpaBuckets['3.5–4.4']++;
-          else gpaBuckets['4.5–5.0']++;
-        });
+        approved.forEach(r => { const g = parseFloat(r.gpa); if (g < 1.5) gpaBuckets['< 1.5']++; else if (g < 2.5) gpaBuckets['1.5–2.4']++; else if (g < 3.5) gpaBuckets['2.5–3.4']++; else if (g < 4.5) gpaBuckets['3.5–4.4']++; else gpaBuckets['4.5–5.0']++; });
         drawBar('admin-gpa-chart', Object.keys(gpaBuckets), Object.values(gpaBuckets), 'Students');
-        const allC2 = approved2.flatMap(r => r.courses);
+        const allC2 = approved.flatMap(r => r.courses);
         const passes = allC2.filter(c => c.grade !== 'F' && c.grade !== 'E').length;
         drawDoughnut('admin-pf-chart', ['Pass', 'Fail'], [passes, allC2.length - passes]);
       });
     }
 
-    // ════ MANAGE RESULTS ════
+    // ════ MANAGE RESULTS (with bulk select) ════
     function renderManageTable() {
       const q = (document.getElementById('mf-search')?.value || '').toLowerCase();
       const sem = document.getElementById('mf-sem')?.value || '';
       const stat = document.getElementById('mf-status')?.value || '';
+      const lvl = document.getElementById('mf-level')?.value || '';
       const rows = DB.results.filter(r =>
         (!q || r.fullName.toLowerCase().includes(q) || r.matricNo.toLowerCase().includes(q)) &&
-        (!sem || r.semester === sem) &&
-        (!stat || r.status === stat)
+        (!sem || r.semester === sem) && (!stat || r.status === stat) && (!lvl || r.level === lvl)
       );
       document.getElementById('manage-tbody').innerHTML = rows.length ? rows.map(r => `
     <tr>
+      <td><input type="checkbox" class="row-check rec-check" data-uid="${r.userID}" data-sem="${r.semester}" onchange="updateBulkBar()"/></td>
       <td class="fw7">${r.fullName}</td>
       <td class="mono">${r.matricNo}</td>
+      <td>${r.level || '—'}</td>
       <td>${r.semester}</td>
       <td>${r.session || '—'}</td>
       <td>${r.gpa}</td>
       <td style="font-size:12px">${r.gradeClass}</td>
-      <td><span class="status-pill s-${r.status.toLowerCase()}">${r.status}</span></td>
+      <td>
+        <span class="status-pill s-${r.status.toLowerCase()}">${r.status}</span>
+        ${r.rejectReason ? `<div style="font-size:10px;color:var(--danger);margin-top:2px">${r.rejectReason.substring(0, 40)}${r.rejectReason.length > 40 ? '…' : ''}</div>` : ''}
+      </td>
       <td><div class="btn-row">
-        ${r.status === 'Pending' ? `<button class="btn btn-success btn-sm" onclick="approveRecord('${r.userID}','${r.semester}')">✓</button><button class="btn btn-danger btn-sm" onclick="rejectRecord('${r.userID}','${r.semester}')">✕</button>` : ''}
+        ${r.status === 'Pending' ? `<button class="btn btn-success btn-sm" onclick="approveRecord('${r.userID}','${r.semester}')">✓</button><button class="btn btn-danger btn-sm" onclick="openRejectModal('${r.userID}','${r.semester}')">✕</button>` : ''}
         <button class="btn btn-ghost btn-sm" onclick="downloadSinglePDF('${r.userID}','${r.semester}')">⬇</button>
         <button class="btn btn-danger btn-sm" onclick="deleteRecord('${r.userID}','${r.semester}')">🗑</button>
       </div></td>
-    </tr>`).join('') : '<tr><td colspan="8" style="text-align:center;padding:1.5rem;color:var(--muted)">No records found.</td></tr>';
+    </tr>`).join('') : '<tr><td colspan="10" style="text-align:center;padding:1.5rem;color:var(--muted)">No records found.</td></tr>';
+      document.getElementById('select-all').checked = false;
+      updateBulkBar();
+    }
+    function toggleSelectAll(cb) {
+      document.querySelectorAll('.rec-check').forEach(c => c.checked = cb.checked);
+      updateBulkBar();
+    }
+    function updateBulkBar() {
+      const checked = document.querySelectorAll('.rec-check:checked');
+      const bar = document.getElementById('bulk-bar');
+      bar.classList.toggle('visible', checked.length > 0);
+      document.getElementById('bulk-count').textContent = checked.length + ' selected';
+    }
+    function clearSelection() {
+      document.querySelectorAll('.rec-check').forEach(c => c.checked = false);
+      document.getElementById('select-all').checked = false;
+      updateBulkBar();
+    }
+    function getSelectedPairs() {
+      return Array.from(document.querySelectorAll('.rec-check:checked')).map(c => ({ uid: c.dataset.uid, sem: c.dataset.sem }));
+    }
+    function bulkApprove() {
+      const pairs = getSelectedPairs();
+      if (!pairs.length) return;
+      if (!confirm(`Approve ${pairs.length} selected record(s)?`)) return;
+      pairs.forEach(({ uid, sem }) => {
+        const r = DB.results.find(x => x.userID === uid && x.semester === sem);
+        if (r && r.status === 'Pending') {
+          r.status = 'Approved';
+          DB.notifications.push({ id: Date.now() + Math.random(), text: `Your ${sem} result has been approved.`, time: new Date().toISOString(), read: false, uid });
+          addAudit('Admin', 'Bulk Approved', `${r.fullName} - ${sem}`, '—');
+        }
+      });
+      saveDB(); renderManageTable(); loadAdminDashboard();
+      showMsg('action-msg', 'success', `✅ ${pairs.length} record(s) approved.`);
+    }
+    function bulkReject() {
+      const pairs = getSelectedPairs();
+      if (!pairs.length) return;
+      const reason = prompt(`Reason for rejecting ${pairs.length} selected record(s):`);
+      if (reason === null) return;
+      pairs.forEach(({ uid, sem }) => {
+        const r = DB.results.find(x => x.userID === uid && x.semester === sem);
+        if (r && r.status === 'Pending') {
+          r.status = 'Rejected'; r.rejectReason = reason || 'No reason given';
+          DB.notifications.push({ id: Date.now() + Math.random(), text: `Your ${sem} result was rejected. Reason: ${r.rejectReason}`, time: new Date().toISOString(), read: false, uid });
+          addAudit('Admin', 'Bulk Rejected', `${r.fullName} - ${sem}`, reason);
+        }
+      });
+      saveDB(); renderManageTable(); loadAdminDashboard();
     }
 
+    // ════ APPROVE / REJECT ════
     function approveRecord(uid, sem) {
       const r = DB.results.find(x => x.userID === uid && x.semester === sem);
       if (r) {
-        r.status = 'Approved'; saveDB();
+        r.status = 'Approved'; delete r.rejectReason; saveDB();
         DB.notifications.push({ id: Date.now(), text: `Your ${sem} result has been approved.`, time: new Date().toISOString(), read: false, uid });
-        saveDB();
-        addAudit('Admin', 'Approved', `${r.fullName} - ${sem}`, '—');
-        renderManageTable(); loadAdminDashboard(); alert('Result approved and student notified.');
-      }
-    }
-    function rejectRecord(uid, sem) {
-      const r = DB.results.find(x => x.userID === uid && x.semester === sem);
-      if (r) {
-        r.status = 'Rejected'; saveDB();
-        DB.notifications.push({ id: Date.now(), text: `Your ${sem} result has been rejected. Contact your department.`, time: new Date().toISOString(), read: false, uid });
-        saveDB();
-        addAudit('Admin', 'Rejected', `${r.fullName} - ${sem}`, '—');
+        saveDB(); addAudit('Admin', 'Approved', `${r.fullName} - ${sem}`, '—');
         renderManageTable(); loadAdminDashboard();
       }
+    }
+    function openRejectModal(uid, sem) {
+      _rejectTarget = { uid, sem };
+      document.getElementById('reject-reason').value = '';
+      document.getElementById('reject-modal').classList.add('open');
+    }
+    function closeRejectModal() {
+      document.getElementById('reject-modal').classList.remove('open');
+      _rejectTarget = { uid: null, sem: null };
+    }
+    function confirmReject() {
+      const reason = document.getElementById('reject-reason').value.trim();
+      if (!reason) { alert('Please enter a reason.'); return }
+      const { uid, sem } = _rejectTarget;
+      const r = DB.results.find(x => x.userID === uid && x.semester === sem);
+      if (r) {
+        r.status = 'Rejected'; r.rejectReason = reason; saveDB();
+        DB.notifications.push({ id: Date.now(), text: `Your ${sem} result was rejected. Reason: ${reason}`, time: new Date().toISOString(), read: false, uid });
+        saveDB(); addAudit('Admin', 'Rejected', `${r.fullName} - ${sem}`, reason);
+        renderManageTable(); loadAdminDashboard();
+      }
+      closeRejectModal();
     }
     function deleteRecord(uid, sem) {
       if (!confirm('Delete this record permanently?')) return;
@@ -2318,28 +2543,33 @@
       const passRate = allC.length ? (allC.filter(c => c.grade !== 'F' && c.grade !== 'E').length / allC.length * 100).toFixed(1) : 0;
       const avgGPA = (approved.reduce((a, r) => a + parseFloat(r.gpa), 0) / Math.max(approved.length, 1)).toFixed(2);
       const firstClass = approved.filter(r => parseFloat(r.gpa) >= 4.5).length;
-
       document.getElementById('analytics-stats').innerHTML = `
     ${statCard('👥', 'Students', students, 'With approved results', '—', 'navy')}
     ${statCard('📊', 'Avg GPA', avgGPA, 'Class average', '—', 'gold')}
     ${statCard('✅', 'Pass Rate', passRate + '%', 'Of all courses', '—', 'green')}
     ${statCard('🏅', '1st Class', firstClass, 'Students', '—', 'teal')}
   `;
-
-      // Top performers
       const byStudent = Object.values(approved.reduce((acc, r) => {
-        if (!acc[r.matricNo]) acc[r.matricNo] = { name: r.fullName, matric: r.matricNo, courses: [] };
+        if (!acc[r.matricNo]) acc[r.matricNo] = { name: r.fullName, matric: r.matricNo, level: r.level || '—', courses: [] };
         acc[r.matricNo].courses.push(...r.courses);
         return acc;
       }, {})).map(s => ({ ...s, cgpa: parseFloat(calcCGPA(s.courses)) })).sort((a, b) => b.cgpa - a.cgpa);
 
       document.getElementById('top-performers').innerHTML = `
-    <div style="overflow-x:auto"><table class="dt"><thead><tr><th>#</th><th>Name</th><th>Matric</th><th>CGPA</th><th>Class</th></tr></thead>
-    <tbody>${byStudent.slice(0, 10).map((s, i) => `<tr><td>${i + 1}</td><td class="fw7">${s.name}</td><td class="mono">${s.matric}</td><td class="fw7">${s.cgpa.toFixed(2)}</td><td>${gpaClass(s.cgpa)}</td></tr>`).join('')}</tbody></table></div>`;
+    <div style="overflow-x:auto"><table class="dt"><thead><tr><th>#</th><th>Name</th><th>Matric</th><th>Level</th><th>CGPA</th><th>Class</th></tr></thead>
+    <tbody>${byStudent.slice(0, 10).map((s, i) => `<tr><td>${i + 1}</td><td class="fw7">${s.name}</td><td class="mono">${s.matric}</td><td>${s.level}</td><td class="fw7">${s.cgpa.toFixed(2)}</td><td>${gpaClass(s.cgpa)}</td></tr>`).join('')}</tbody></table></div>`;
 
       document.getElementById('at-risk').innerHTML = `
-    <div style="overflow-x:auto"><table class="dt"><thead><tr><th>Name</th><th>Matric</th><th>CGPA</th><th>Class</th></tr></thead>
-    <tbody>${byStudent.filter(s => s.cgpa < 2.0).map(s => `<tr><td class="fw7">${s.name}</td><td class="mono">${s.matric}</td><td style="color:#dc2626;font-weight:700">${s.cgpa.toFixed(2)}</td><td>${gpaClass(s.cgpa)}</td></tr>`).join('') || '<tr><td colspan="4" style="text-align:center;padding:1rem;color:var(--muted)">No at-risk students 🎉</td></tr>'}</tbody></table></div>`;
+    <div style="overflow-x:auto"><table class="dt"><thead><tr><th>Name</th><th>Matric</th><th>Level</th><th>CGPA</th><th>Class</th></tr></thead>
+    <tbody>${byStudent.filter(s => s.cgpa < 2.0).map(s => `<tr><td class="fw7">${s.name}</td><td class="mono">${s.matric}</td><td>${s.level}</td><td style="color:#dc2626;font-weight:700">${s.cgpa.toFixed(2)}</td><td>${gpaClass(s.cgpa)}</td></tr>`).join('') || '<tr><td colspan="5" style="text-align:center;padding:1rem;color:var(--muted)">No at-risk students 🎉</td></tr>'}</tbody></table></div>`;
+
+      // Carry-over report
+      const carryOvers = [];
+      approved.forEach(r => r.courses.filter(c => c.grade === 'F' || c.grade === 'E').forEach(c => carryOvers.push({ name: r.fullName, matric: r.matricNo, level: r.level || '—', course: c.code, title: c.title, score: c.score, grade: c.grade, semester: r.semester })));
+      document.getElementById('carry-over-list').innerHTML = carryOvers.length ? `
+    <div style="overflow-x:auto"><table class="dt"><thead><tr><th>Student</th><th>Matric</th><th>Level</th><th>Course</th><th>Title</th><th>Score</th><th>Grade</th><th>Semester</th></tr></thead>
+    <tbody>${carryOvers.map(co => `<tr><td class="fw7">${co.name}</td><td class="mono">${co.matric}</td><td>${co.level}</td><td class="mono fw7">${co.course}</td><td>${co.title}</td><td style="color:#dc2626">${co.score}</td><td><span class="grade-pill g${co.grade}">${co.grade}</span></td><td>${co.semester}</td></tr>`).join('')}</tbody></table></div>`
+        : '<div class="empty-state" style="padding:1.5rem"><div class="em-icon" style="font-size:1.5rem">🎉</div>No carry-over courses.</div>';
 
       destroyChart('an-gpa-sem'); destroyChart('an-grades');
       nextTick(() => {
@@ -2358,34 +2588,36 @@
     function renderStudentsTable() {
       const q = (document.getElementById('stf-search')?.value || '').toLowerCase();
       const sem = document.getElementById('stf-sem')?.value || '';
+      const lvl = document.getElementById('stf-level')?.value || '';
       const byStudent = {};
       DB.results.filter(r => r.status === 'Approved').forEach(r => {
-        if (!byStudent[r.matricNo]) byStudent[r.matricNo] = { name: r.fullName, matric: r.matricNo, email: r.email, session: r.session, records: [] };
+        if (!byStudent[r.matricNo]) byStudent[r.matricNo] = { name: r.fullName, matric: r.matricNo, email: r.email, session: r.session, level: r.level || '—', records: [] };
         byStudent[r.matricNo].records.push(r);
       });
-      let rows = Object.values(byStudent).filter(s => !q || s.name.toLowerCase().includes(q) || s.matric.toLowerCase().includes(q));
+      let rows = Object.values(byStudent).filter(s =>
+        (!q || s.name.toLowerCase().includes(q) || s.matric.toLowerCase().includes(q)) &&
+        (!lvl || s.level === lvl)
+      );
       document.getElementById('students-tbody').innerHTML = rows.length ? rows.map(s => {
         const allC = s.records.flatMap(r => r.courses);
         const cgpa = calcCGPA(allC);
         const latest = s.records[s.records.length - 1];
         return `<tr>
       <td class="fw7">${s.name}</td><td class="mono">${s.matric}</td>
-      <td>${s.email}</td><td>${s.session || '—'}</td>
+      <td>${s.level}</td><td>${s.email}</td><td>${s.session || '—'}</td>
       <td>${s.records.length}</td>
       <td>${parseFloat(latest.gpa).toFixed(2)}</td>
       <td class="fw7">${cgpa}</td>
       <td><button class="btn btn-outline btn-sm" onclick="downloadStudentPDF('${s.matric}')">⬇ PDF</button></td>
     </tr>`;
-      }).join('') : '<tr><td colspan="8" style="text-align:center;padding:1.5rem;color:var(--muted)">No students found.</td></tr>';
+      }).join('') : '<tr><td colspan="9" style="text-align:center;padding:1.5rem;color:var(--muted)">No students found.</td></tr>';
     }
 
     // ════ COURSE LIST ════
     function renderCourseList() {
       document.getElementById('course-list-tbody').innerHTML = DB.courses.map((c, i) => `
-    <tr>
-      <td class="mono fw7">${c.code}</td><td>${c.title}</td><td>${c.units}</td>
-      <td><button class="del-btn" onclick="deleteCourse(${i})">✕</button></td>
-    </tr>`).join('');
+    <tr><td class="mono fw7">${c.code}</td><td>${c.title}</td><td>${c.units}</td>
+    <td><button class="del-btn" onclick="deleteCourse(${i})">✕</button></td></tr>`).join('');
     }
     function addCourseToList() { document.getElementById('course-list-form').classList.remove('hidden') }
     function saveCourse() {
@@ -2402,7 +2634,7 @@
 
     // ════ AUDIT LOG ════
     function renderAuditLog() {
-      document.getElementById('audit-tbody').innerHTML = DB.auditLog.slice(0, 50).map(l => `
+      document.getElementById('audit-tbody').innerHTML = DB.auditLog.slice(0, 100).map(l => `
     <tr>
       <td style="font-size:11px;white-space:nowrap">${new Date(l.time).toLocaleString()}</td>
       <td class="fw7">${l.actor}</td><td>${l.action}</td><td>${l.target}</td>
@@ -2412,9 +2644,7 @@
 
     // ════ SUBMIT FORM ════
     function initSubmitForm() {
-      if (document.getElementById('ctbody').rows.length === 0) {
-        for (let i = 0; i < 5; i++)addRow();
-      }
+      if (document.getElementById('ctbody').rows.length === 0) { for (let i = 0; i < 5; i++)addRow(); }
     }
     function addRow() {
       rowCount++;
@@ -2432,23 +2662,17 @@
     <td><input type="number" id="sc-${id}" min="0" max="100" placeholder="0–100" style="width:70px" oninput="calcGPA();updateRowGrade(${id})"/></td>
     <td><span id="gr-${id}" class="grade-pill">—</span></td>
     <td><span id="gp-${id}" style="font-size:12px;color:var(--muted)">—</span></td>
-    <td><button class="del-btn" onclick="removeRow(${id})">✕</button></td>
-  `;
+    <td><button class="del-btn" onclick="removeRow(${id})">✕</button></td>`;
       document.getElementById('ctbody').appendChild(tr);
     }
     function fillCourse(id) {
       const val = document.getElementById('cc-' + id).value;
-      if (val && val !== '__custom') {
-        const [code, title, units] = val.split('|');
-        document.getElementById('ct-' + id).value = title;
-        document.getElementById('cu-' + id).value = units;
-      }
+      if (val && val !== '__custom') { const [code, title, units] = val.split('|'); document.getElementById('ct-' + id).value = title; document.getElementById('cu-' + id).value = units; }
     }
     function removeRow(id) { document.getElementById('cr-' + id)?.remove(); calcGPA() }
     function updateRowGrade(id) {
       const sc = parseFloat(document.getElementById('sc-' + id)?.value);
-      const grEl = document.getElementById('gr-' + id);
-      const gpEl = document.getElementById('gp-' + id);
+      const grEl = document.getElementById('gr-' + id); const gpEl = document.getElementById('gp-' + id);
       if (!grEl) return;
       if (isNaN(sc) || sc < 0) { grEl.textContent = '—'; grEl.className = 'grade-pill'; gpEl && (gpEl.textContent = '—'); return }
       const { letter, point, cls } = scoreToGrade(sc);
@@ -2462,10 +2686,7 @@
         const id = row.id.replace('cr-', '');
         const sc = parseFloat(document.getElementById('sc-' + id)?.value);
         const cu = parseFloat(document.getElementById('cu-' + id)?.value || 3);
-        if (!isNaN(sc) && sc >= 0 && !isNaN(cu) && cu > 0) {
-          const { point } = scoreToGrade(sc); tp += point * cu; tu += cu; cnt++;
-          updateRowGrade(id);
-        }
+        if (!isNaN(sc) && sc >= 0 && !isNaN(cu) && cu > 0) { const { point } = scoreToGrade(sc); tp += point * cu; tu += cu; cnt++; updateRowGrade(id); }
       });
       const gpaEl = document.getElementById('gpa-disp');
       const metaEl = document.getElementById('gpa-meta');
@@ -2476,8 +2697,6 @@
       metaEl.textContent = `${cnt} courses · ${tu} credit units`;
       clsEl.textContent = gpaClass(gpa); clsEl.style.display = 'inline-block';
     }
-
-    // ── User ID ──
     function generateUID(name, matric) {
       if (!name || !matric) return '';
       const np = name.replace(/\s+/g, '').toUpperCase().substring(0, 3).padEnd(3, 'X');
@@ -2495,12 +2714,7 @@
       if (uid) { document.getElementById('uid-display').textContent = uid; wrap.classList.remove('hidden') }
       else wrap.classList.add('hidden');
     }
-    function copyUID() {
-      const uid = document.getElementById('uid-display').textContent;
-      navigator.clipboard.writeText(uid).then(() => alert('Copied User ID: ' + uid));
-    }
-
-    // ── Gather and Submit ──
+    function copyUID() { navigator.clipboard.writeText(document.getElementById('uid-display').textContent).then(() => alert('Copied User ID: ' + document.getElementById('uid-display').textContent)) }
     function gatherCourses() {
       const rows = document.getElementById('ctbody').querySelectorAll('tr');
       const out = [];
@@ -2511,14 +2725,10 @@
         const title = document.getElementById('ct-' + id)?.value.trim();
         const units = parseFloat(document.getElementById('cu-' + id)?.value || 3);
         const score = parseFloat(document.getElementById('sc-' + id)?.value);
-        if (title && !isNaN(score) && score >= 0) {
-          const { letter, point } = scoreToGrade(score);
-          out.push({ code: code || '—', title, units, score, grade: letter, point: point.toFixed(1) });
-        }
+        if (title && !isNaN(score) && score >= 0) { const { letter, point } = scoreToGrade(score); out.push({ code: code || '—', title, units, score, grade: letter, point: point.toFixed(1) }); }
       });
       return out;
     }
-
     async function submitResult() {
       const name = document.getElementById('s-name').value.trim();
       const mat = document.getElementById('s-mat').value.trim().toUpperCase();
@@ -2526,45 +2736,39 @@
       const email = document.getElementById('s-email').value.trim();
       const sem = document.getElementById('s-sem').value;
       const sess = document.getElementById('s-session').value.trim();
+      const dept = document.getElementById('s-dept').value.trim();
+      const faculty = document.getElementById('s-faculty').value.trim();
+      const level = document.getElementById('s-level').value;
+      const phone = document.getElementById('s-phone').value.trim();
       const courses = gatherCourses();
-
       if (!name || !mat || !email || !sem || !sess) { showMsg('submit-msg', 'error', 'Please fill in all student information fields.'); return }
       if (courses.length < 1) { showMsg('submit-msg', 'error', 'Add at least one course with a score.'); return }
-
-      // Check duplicate
       const dup = DB.results.find(r => r.matricNo === mat && r.semester === sem);
       if (dup && !confirm(`A record for ${name} (${sem}) already exists with status "${dup.status}". Submit anyway?`)) return;
-
       const tu = courses.reduce((a, c) => a + c.units, 0);
       const tp = courses.reduce((a, c) => a + parseFloat(c.point) * c.units, 0);
       const gpa = (tp / tu).toFixed(2);
       const gradeClass = gpaClass(parseFloat(gpa));
       const userID = generateUID(name, mat);
-
       const record = {
-        userID, fullName: name, matricNo: mat, regNo: reg, email,
+        userID, fullName: name, matricNo: mat, regNo: reg, email, department: dept, faculty, level, phone,
         semester: sem, session: sess, courses, gpa, gradeClass,
-        status: 'Pending', timestamp: new Date().toISOString(),
-        submittedBy: Session.role === 'admin' ? 'Admin' : 'Student'
+        status: 'Pending', timestamp: new Date().toISOString(), submittedBy: Session.role === 'admin' ? 'Admin' : 'Student'
       };
       DB.results.push(record);
       addAudit(Session.user || 'Admin', 'Submit Result', `${name} - ${sem}`, `GPA: ${gpa}`);
       DB.notifications.push({ id: Date.now(), text: `${sem} result submitted. Awaiting approval.`, time: new Date().toISOString(), read: false, uid: userID });
       saveDB();
-
       if (CFG.gsURL) {
-        try {
-          await fetch(CFG.gsURL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(record) });
-        } catch (e) { }
+        try { await fetch(CFG.gsURL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(record) }); } catch (e) { }
       }
-
       showMsg('submit-msg', 'success', `✅ Result submitted! User ID: <strong class="mono">${userID}</strong> · GPA: <strong>${gpa}</strong> (${gradeClass}). Status: Pending Approval.`);
       addAudit(Session.user, 'Result submitted', name + ' ' + sem, 'GPA: ' + gpa);
     }
-
     function clearForm() {
-      ['s-name', 's-mat', 's-reg', 's-email', 's-session'].forEach(id => { document.getElementById(id).value = '' });
+      ['s-name', 's-mat', 's-reg', 's-email', 's-session', 's-dept', 's-faculty', 's-phone'].forEach(id => { const el = document.getElementById(id); if (el) el.value = '' });
       document.getElementById('s-sem').value = '';
+      document.getElementById('s-level').value = '';
       document.getElementById('ctbody').innerHTML = '';
       rowCount = 0;
       for (let i = 0; i < 5; i++)addRow();
@@ -2576,7 +2780,7 @@
 
     // ════ BULK UPLOAD ════
     function downloadTemplate() {
-      const csv = 'FullName,MatricNo,RegNo,Email,Semester,Session,CourseCode,CourseTitle,CreditUnits,Score\nJohn Doe,CSC/2021/001,2021/1/001CS,john@uni.edu,First Semester,2023/2024,CSC 301,Data Structures,3,75\nJohn Doe,CSC/2021/001,2021/1/001CS,john@uni.edu,First Semester,2023/2024,CSC 302,Computer Architecture,3,60';
+      const csv = 'FullName,MatricNo,RegNo,Email,Department,Level,Semester,Session,CourseCode,CourseTitle,CreditUnits,Score\nJohn Doe,CSC/2021/001,2021/1/001CS,john@fuoye.edu.ng,Computer Science,300 Level,First Semester,2025/2026,CSC 301,Operating Systems,3,75\nJohn Doe,CSC/2021/001,2021/1/001CS,john@fuoye.edu.ng,Computer Science,300 Level,First Semester,2025/2026,CSC 302,Database Systems,3,60';
       downloadFile('AcadTrack_Template.csv', csv, 'text/csv');
     }
     function handleBulkUpload(e) {
@@ -2586,91 +2790,172 @@
         const lines = ev.target.result.split('\n').filter(l => l.trim());
         const headers = lines[0].split(',').map(h => h.trim());
         const rows = lines.slice(1).map(l => Object.fromEntries(l.split(',').map((v, i) => [headers[i], v.trim()])));
-        // Group by matric+semester
         const grouped = {};
         rows.forEach(r => {
-          const key = r.MatricNo + '|' + r.Semester;
+          const key = (r.MatricNo || '') + '|' + (r.Semester || '');
           if (!grouped[key]) grouped[key] = { ...r, courses: [] };
-          if (r.CourseCode && r.Score) grouped[key].courses.push({ code: r.CourseCode, title: r.CourseTitle, units: parseFloat(r.CreditUnits) || 3, score: parseFloat(r.Score) || 0, ...(() => { const g = scoreToGrade(parseFloat(r.Score) || 0); return { grade: g.letter, point: g.point.toFixed(1) } })() });
+          if (r.CourseCode && r.Score) grouped[key].courses.push({ code: r.CourseCode, title: r.CourseTitle || '', units: parseFloat(r.CreditUnits) || 3, score: parseFloat(r.Score) || 0, ...(() => { const g = scoreToGrade(parseFloat(r.Score) || 0); return { grade: g.letter, point: g.point.toFixed(1) } })() });
         });
         const preview = Object.values(grouped);
+        const dupes = preview.filter(p => DB.results.find(r => r.matricNo === (p.MatricNo || '').toUpperCase() && r.semester === p.Semester));
         document.getElementById('bulk-preview').innerHTML = `
-      <div class="alert al-success">Found ${preview.length} student-semester records. <button class="btn btn-primary btn-sm" onclick="importBulk(${JSON.stringify(preview).split('"').join("'")} )">Import All</button></div>
-      <div style="overflow-x:auto"><table class="dt"><thead><tr><th>Name</th><th>Matric</th><th>Semester</th><th>Courses</th></tr></thead>
-      <tbody>${preview.map(p => `<tr><td>${p.FullName || p.fullName}</td><td class="mono">${p.MatricNo || p.matricNo}</td><td>${p.Semester || p.semester}</td><td>${p.courses.length}</td></tr>`).join('')}</tbody></table></div>`;
+      <div class="alert al-success">Found ${preview.length} student-semester records.${dupes.length ? ` <strong>${dupes.length} duplicate(s)</strong> will be skipped.` : ''}</div>
+      ${dupes.length ? `<div class="alert al-warn">Duplicates: ${dupes.map(d => d.FullName + ' (' + d.Semester + ')').join(', ')}</div>` : ''}
+      <div class="btn-row mt"><button class="btn btn-primary btn-sm" id="do-import-btn">Import ${preview.length - dupes.length} Record(s)</button></div>
+      <div style="overflow-x:auto;margin-top:.75rem"><table class="dt"><thead><tr><th>Name</th><th>Matric</th><th>Dept</th><th>Level</th><th>Semester</th><th>Courses</th></tr></thead>
+      <tbody>${preview.map(p => `<tr><td>${p.FullName || ''}</td><td class="mono">${p.MatricNo || ''}</td><td>${p.Department || '—'}</td><td>${p.Level || '—'}</td><td>${p.Semester || ''}</td><td>${p.courses.length}</td></tr>`).join('')}</tbody></table></div>`;
+        document.getElementById('do-import-btn').onclick = () => importBulk(preview, dupes);
       };
       reader.readAsText(file);
     }
-    function importBulk(records) {
+    function importBulk(records, dupes) {
       let count = 0;
       records.forEach(p => {
-        const name = p.FullName || p.fullName, mat = (p.MatricNo || p.matricNo).toUpperCase();
+        const mat = (p.MatricNo || '').toUpperCase();
+        const sem = p.Semester || '';
+        if (DB.results.find(r => r.matricNo === mat && r.semester === sem)) return;
+        const name = p.FullName || '';
         const tu = p.courses.reduce((a, c) => a + c.units, 0);
         const tp = p.courses.reduce((a, c) => a + parseFloat(c.point) * c.units, 0);
         const gpa = (tu ? (tp / tu) : 0).toFixed(2);
-        const rec = { userID: generateUID(name, mat), fullName: name, matricNo: mat, regNo: p.RegNo || '', email: p.Email || '', semester: p.Semester || p.semester, session: p.Session || '', courses: p.courses, gpa, gradeClass: gpaClass(parseFloat(gpa)), status: 'Pending', timestamp: new Date().toISOString(), submittedBy: 'Bulk Import' };
+        const rec = {
+          userID: generateUID(name, mat), fullName: name, matricNo: mat, regNo: p.RegNo || '', email: p.Email || '',
+          department: p.Department || '', level: p.Level || '', semester: sem, session: p.Session || '',
+          courses: p.courses, gpa, gradeClass: gpaClass(parseFloat(gpa)),
+          status: 'Pending', timestamp: new Date().toISOString(), submittedBy: 'Bulk Import'
+        };
         DB.results.push(rec); count++;
       });
       addAudit('Admin', 'Bulk Import', `${count} records`, 'CSV upload');
-      saveDB(); alert(`${count} records imported successfully!`);
+      saveDB();
+      document.getElementById('bulk-preview').innerHTML = `<div class="alert al-success">✅ ${count} record(s) imported successfully.</div>`;
       renderManageTable();
     }
 
-    // ════ PDF GENERATION ════
+    // ════ PDF GENERATION (enhanced) ════
     function buildPDF(recs, mode) {
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
-
-      // Header bar
-      doc.setFillColor(12, 45, 94); doc.rect(0, 0, 210, 30, 'F');
-      doc.setFillColor(200, 148, 26); doc.rect(0, 27, 210, 3, 'F');
-      doc.setTextColor(200, 148, 26); doc.setFontSize(20); doc.setFont('helvetica', 'bold');
-      doc.text('AcadTrack Pro', 14, 12);
-      doc.setTextColor(255, 255, 255); doc.setFontSize(9); doc.setFont('helvetica', 'normal');
-      doc.text('Official Academic Result Record', 14, 20);
-      doc.text('Generated: ' + new Date().toLocaleDateString(), 196, 20, { align: 'right' });
-
+      const uniName = CFG.uniName || 'University Name';
+      const faculty = CFG.faculty || 'Faculty of Computing';
+      const deptName = CFG.dept || 'Computer Science';
+      const registrar = CFG.registrar || 'Registrar';
+      const watermark = CFG.watermark || 'OFFICIAL DOCUMENT';
       const first = recs[0];
-      let y = 38;
-      doc.setTextColor(12, 45, 94); doc.setFontSize(14); doc.setFont('helvetica', 'bold');
-      doc.text(first.fullName, 14, y); y += 6;
-      doc.setFontSize(9); doc.setFont('helvetica', 'normal'); doc.setTextColor(100, 110, 130);
-      doc.text(`Matric: ${first.matricNo}   Reg: ${first.regNo || '—'}   Email: ${first.email}`, 14, y); y += 5;
-      doc.text(`User ID: ${first.userID}`, 14, y); y += 8;
+
+      // ── WATERMARK ──
+      doc.saveGraphicsState();
+      doc.setGState(new doc.GState({ opacity: 0.07 }));
+      doc.setTextColor(12, 45, 94);
+      doc.setFontSize(52);
+      doc.setFont('helvetica', 'bold');
+      doc.text(watermark, 105, 148, { align: 'center', angle: 45 });
+      doc.restoreGraphicsState();
+
+      // ── HEADER BAR ──
+      doc.setFillColor(12, 45, 94); doc.rect(0, 0, 210, 38, 'F');
+      doc.setFillColor(200, 148, 26); doc.rect(0, 36, 210, 2.5, 'F');
+
+      // University name
+      doc.setTextColor(255, 255, 255); doc.setFontSize(14); doc.setFont('helvetica', 'bold');
+      doc.text(uniName.toUpperCase(), 105, 12, { align: 'center' });
+      doc.setFontSize(9); doc.setFont('helvetica', 'normal'); doc.setTextColor(200, 148, 26);
+      doc.text(faculty + ' · ' + deptName, 105, 19, { align: 'center' });
+      doc.setTextColor(255, 255, 255); doc.setFontSize(11); doc.setFont('helvetica', 'bold');
+      doc.text(mode === 'transcript' ? 'OFFICIAL ACADEMIC TRANSCRIPT' : 'SEMESTER RESULT STATEMENT', 105, 28, { align: 'center' });
+      doc.setFontSize(8); doc.setFont('helvetica', 'normal'); doc.setTextColor(180, 200, 220);
+      doc.text('Generated: ' + new Date().toLocaleDateString('en-NG', { day: '2-digit', month: 'long', year: 'numeric' }), 105, 34, { align: 'center' });
+
+      // ── STUDENT INFO BOX ──
+      let y = 44;
+      doc.setFillColor(245, 247, 252); doc.roundedRect(14, y, 182, 32, 3, 3, 'F');
+      doc.setDrawColor(200, 210, 230); doc.setLineWidth(0.3); doc.roundedRect(14, y, 182, 32, 3, 3, 'S');
+      doc.setTextColor(12, 45, 94); doc.setFontSize(12); doc.setFont('helvetica', 'bold');
+      doc.text(first.fullName, 20, y + 8);
+      doc.setFontSize(8); doc.setFont('helvetica', 'normal'); doc.setTextColor(80, 90, 110);
+      const col1 = [`Matric No: ${first.matricNo}`, `Reg No: ${first.regNo || '—'}`, `Email: ${first.email}`];
+      const col2 = [`Department: ${first.department || deptName}`, `Level: ${first.level || '—'}`, `User ID: ${first.userID}`];
+      col1.forEach((t, i) => doc.text(t, 20, y + 15 + i * 5.5));
+      col2.forEach((t, i) => doc.text(t, 110, y + 15 + i * 5.5));
+      y += 38;
 
       const allC = recs.flatMap(r => r.courses);
       const cgpa = calcCGPA(allC);
 
       if (mode === 'transcript') {
         recs.forEach(rec => {
-          doc.setFillColor(240, 243, 250); doc.rect(14, y, 182, 7, 'F');
-          doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(12, 45, 94);
-          doc.text(`${rec.semester} · ${rec.session} — GPA: ${parseFloat(rec.gpa).toFixed(2)} (${rec.gradeClass})`, 16, y + 5); y += 10;
+          if (y > 250) { doc.addPage(); y = 20; }
+          doc.setFillColor(232, 237, 248); doc.rect(14, y, 182, 8, 'F');
+          doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); doc.setTextColor(12, 45, 94);
+          doc.text(`${rec.semester}  ·  ${rec.session}  —  GPA: ${parseFloat(rec.gpa).toFixed(2)}  (${rec.gradeClass})`, 17, y + 5.5);
+          y += 10;
           doc.autoTable({
-            startY: y, head: [['#', 'Code', 'Title', 'Units', 'Score', 'Grade', 'GP']],
-            body: rec.courses.map((c, i) => [i + 1, c.code, c.title, c.units, c.score, c.grade, c.point]),
-            theme: 'grid', headStyles: { fillColor: [12, 45, 94], textColor: 255, fontSize: 8 },
-            bodyStyles: { fontSize: 8, cellPadding: 2 }, margin: { left: 14, right: 14 }
+            startY: y,
+            head: [['#', 'Course Code', 'Course Title', 'Units', 'Score', 'Grade', 'Grade Points']],
+            body: rec.courses.map((c, i) => [i + 1, c.code, c.title, c.units, c.score, c.grade, (parseFloat(c.point) * parseFloat(c.units)).toFixed(1)]),
+            theme: 'striped',
+            headStyles: { fillColor: [12, 45, 94], textColor: 255, fontSize: 8, fontStyle: 'bold', cellPadding: 3 },
+            bodyStyles: { fontSize: 8, cellPadding: 2.5 },
+            alternateRowStyles: { fillColor: [248, 250, 255] },
+            columnStyles: { 0: { cellWidth: 8 }, 1: { cellWidth: 24 }, 2: { cellWidth: 70 }, 3: { cellWidth: 14 }, 4: { cellWidth: 14 }, 5: { cellWidth: 14 }, 6: { cellWidth: 22 } },
+            margin: { left: 14, right: 14 }
           });
-          y = doc.lastAutoTable.finalY + 8;
+          y = doc.lastAutoTable.finalY + 5;
         });
-        doc.setFillColor(240, 243, 250); doc.roundedRect(14, y, 182, 16, 3, 3, 'F');
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor(12, 45, 94);
-        doc.text(`Cumulative GPA: ${cgpa}   —   ${gpaClass(parseFloat(cgpa))}`, 22, y + 10);
+        // CGPA summary box
+        if (y > 260) { doc.addPage(); y = 20; }
+        doc.setFillColor(12, 45, 94); doc.roundedRect(14, y, 182, 20, 3, 3, 'F');
+        doc.setTextColor(200, 148, 26); doc.setFont('helvetica', 'bold'); doc.setFontSize(12);
+        doc.text(`Cumulative GPA: ${cgpa}`, 22, y + 9);
+        doc.setTextColor(255, 255, 255); doc.setFontSize(10);
+        doc.text(gpaClass(parseFloat(cgpa)), 22, y + 16);
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(200, 220, 255);
+        doc.text(`${allC.length} courses · ${allC.reduce((a, c) => a + parseFloat(c.units), 0)} total credit units`, 120, y + 12.5);
+        y += 26;
       } else {
         const rec = recs[0];
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(12, 45, 94);
-        doc.text(`${rec.semester} · ${rec.session}`, 14, y); y += 6;
+        doc.setFillColor(232, 237, 248); doc.rect(14, y, 182, 8, 'F');
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); doc.setTextColor(12, 45, 94);
+        doc.text(`${rec.semester}  ·  ${rec.session}`, 17, y + 5.5); y += 10;
         doc.autoTable({
-          startY: y, head: [['#', 'Code', 'Title', 'Units', 'Score', 'Grade', 'GP']],
-          body: rec.courses.map((c, i) => [i + 1, c.code, c.title, c.units, c.score, c.grade, c.point]),
-          theme: 'grid', headStyles: { fillColor: [12, 45, 94], textColor: 255, fontSize: 9 },
-          bodyStyles: { fontSize: 9, cellPadding: 3 }, margin: { left: 14, right: 14 }
+          startY: y,
+          head: [['#', 'Course Code', 'Course Title', 'Units', 'Score', 'Grade', 'Grade Points']],
+          body: rec.courses.map((c, i) => [i + 1, c.code, c.title, c.units, c.score, c.grade, (parseFloat(c.point) * parseFloat(c.units)).toFixed(1)]),
+          theme: 'striped',
+          headStyles: { fillColor: [12, 45, 94], textColor: 255, fontSize: 9, fontStyle: 'bold', cellPadding: 3 },
+          bodyStyles: { fontSize: 9, cellPadding: 3 },
+          alternateRowStyles: { fillColor: [248, 250, 255] },
+          columnStyles: { 0: { cellWidth: 8 }, 1: { cellWidth: 24 }, 2: { cellWidth: 70 }, 3: { cellWidth: 14 }, 4: { cellWidth: 14 }, 5: { cellWidth: 14 }, 6: { cellWidth: 22 } },
+          margin: { left: 14, right: 14 }
         });
-        y = doc.lastAutoTable.finalY + 8;
-        doc.setFillColor(240, 243, 250); doc.roundedRect(14, y, 182, 18, 3, 3, 'F');
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(12); doc.setTextColor(12, 45, 94);
-        doc.text(`GPA: ${parseFloat(rec.gpa).toFixed(2)}   —   ${rec.gradeClass}`, 22, y + 12);
+        y = doc.lastAutoTable.finalY + 5;
+        doc.setFillColor(12, 45, 94); doc.roundedRect(14, y, 182, 18, 3, 3, 'F');
+        doc.setTextColor(200, 148, 26); doc.setFont('helvetica', 'bold'); doc.setFontSize(12);
+        doc.text(`Semester GPA: ${parseFloat(rec.gpa).toFixed(2)}`, 22, y + 8);
+        doc.setTextColor(255, 255, 255); doc.setFontSize(10);
+        doc.text(rec.gradeClass, 22, y + 14);
+        y += 24;
+      }
+
+      // ── SIGNATURE / FOOTER ──
+      const pageCount = doc.internal.getNumberOfPages();
+      for (let i = 1; i <= pageCount; i++) {
+        doc.setPage(i);
+        const py = 280;
+        doc.setDrawColor(200, 210, 230); doc.setLineWidth(0.3); doc.line(14, py, 196, py);
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(100, 110, 130);
+        doc.text('This is an officially generated document from the AcadTrack Result Management System.', 105, py + 5, { align: 'center' });
+        doc.text('Any alterations render this document invalid.', 105, py + 9, { align: 'center' });
+
+        // Signature block
+        doc.setDrawColor(80, 90, 110); doc.setLineWidth(0.4); doc.line(130, py + 20, 196, py + 20);
+        doc.setFontSize(8); doc.setFont('helvetica', 'bold'); doc.setTextColor(12, 45, 94);
+        doc.text(registrar, 163, py + 24, { align: 'center' });
+        doc.setFont('helvetica', 'normal'); doc.setTextColor(100, 110, 130);
+        doc.text('Registrar / Academic Records', 163, py + 28, { align: 'center' });
+
+        doc.setFontSize(7.5); doc.setTextColor(140, 150, 170);
+        doc.text(`Page ${i} of ${pageCount}  |  Generated on ${new Date().toLocaleDateString()}`, 105, py + 33, { align: 'center' });
       }
       return doc;
     }
@@ -2680,7 +2965,6 @@
       if (!recs.length) return;
       const doc = buildPDF(recs, 'single');
       doc.save(`Result_${recs[0].matricNo.replace(/\//g, '-')}_${sem.replace(/ /g, '_')}.pdf`);
-      showMsg('action-msg', 'success', 'PDF downloaded.');
     }
     function downloadTranscriptPDF() {
       const uid = Session.user;
@@ -2716,30 +3000,51 @@
     }
     function emailTranscript() { emailSingle(Session.user, 'ALL') }
 
-    // ════ SHARE LINK ════
-    function genShareLink() {
-      const uid = Session.user;
-      const token = btoa(uid + '|ALL|' + Date.now());
-      const link = window.location.href.split('?')[0] + '?share=' + token;
-      const d = document.createElement('div');
-      d.className = 'card mt2';
-      d.innerHTML = `<div class="card-title">Shareable Link</div>
-    <p style="font-size:12px;color:var(--muted);margin-bottom:.5rem">Anyone with this link can view your transcript (read-only).</p>
-    <div class="share-input"><input value="${link}" readonly onclick="this.select()"/><button class="btn btn-primary btn-sm" onclick="navigator.clipboard.writeText('${link}').then(()=>alert('Link copied!'))">Copy</button></div>`;
-      document.getElementById('pg-transcript').appendChild(d);
-      setTimeout(() => d.remove(), 15000);
+    // ════ SHARE LINK (secure) ════
+    function openShareModal() {
+      document.getElementById('share-link-result').innerHTML = '';
+      document.getElementById('share-modal').classList.add('open');
     }
-    function copyShareLink(uid, sem) { genShareLink() }
+    function createShareLink() {
+      const uid = Session.user;
+      const days = parseInt(document.getElementById('share-expiry').value) || 7;
+      const pin = document.getElementById('share-pin').value.trim();
+      const expiry = Date.now() + (days * 24 * 3600 * 1000);
+      // Store token in DB
+      const token = uid + '_' + Math.random().toString(36).substring(2, 10) + '_' + expiry + (pin ? '_' + pin : '');
+      const encoded = btoa(token);
+      const link = window.location.href.split('?')[0] + '?share=' + encoded;
+      if (!DB.shareTokens) DB.shareTokens = {};
+      DB.shareTokens[encoded] = { uid, expiry, pin: pin || null };
+      saveDB();
+      document.getElementById('share-link-result').innerHTML = `
+    <div class="alert al-success" style="margin-top:.5rem">Link generated — expires in ${days} day(s)${pin ? ' · PIN protected' : ''}</div>
+    <div class="share-input mt"><input value="${link}" readonly onclick="this.select()"/><button class="btn btn-primary btn-sm" onclick="navigator.clipboard.writeText('${link}').then(()=>alert('Link copied!'))">Copy</button></div>`;
+    }
 
     // ════ EXPORT ════
     function exportAllCSV() {
-      const rows = DB.results.map(r => [r.timestamp, r.userID, r.fullName, r.matricNo, r.regNo, r.email, r.semester, r.session, r.gpa, r.gradeClass, r.status].join(','));
-      const csv = 'Timestamp,UserID,FullName,MatricNo,RegNo,Email,Semester,Session,GPA,GradeClass,Status\n' + rows.join('\n');
+      const rows = DB.results.map(r => [r.timestamp, r.userID, r.fullName, r.matricNo, r.regNo, r.email, r.department || '', r.level || '', r.semester, r.session, r.gpa, r.gradeClass, r.status].join(','));
+      const csv = 'Timestamp,UserID,FullName,MatricNo,RegNo,Email,Department,Level,Semester,Session,GPA,GradeClass,Status\n' + rows.join('\n');
       downloadFile('AcadTrack_Export_' + Date.now() + '.csv', csv, 'text/csv');
       addAudit('Admin', 'Export CSV', 'All records', '—');
     }
-    function exportAllExcel() { exportAllCSV(); alert('Exported as CSV — open with Excel to view as spreadsheet.') }
+    function exportAllExcel() { exportAllCSV(); alert('Exported as CSV — open with Excel.') }
     function backupData() { downloadFile('AcadTrack_Backup_' + Date.now() + '.json', JSON.stringify(DB, null, 2), 'application/json') }
+    function restoreFromJSON() { document.getElementById('restore-file').click() }
+    function handleRestore(e) {
+      const file = e.target.files[0]; if (!file) return;
+      const reader = new FileReader();
+      reader.onload = ev => {
+        try {
+          const restored = JSON.parse(ev.target.result);
+          if (!restored.results) throw new Error('Invalid backup');
+          if (!confirm(`Restore ${restored.results.length} records? Current data will be replaced.`)) return;
+          DB = restored; saveDB(); location.reload();
+        } catch { alert('Invalid backup file.'); }
+      };
+      reader.readAsText(file);
+    }
     function clearAllData() { DB = { results: [], courses: [], auditLog: [], notifications: [] }; saveDB(); location.reload() }
     function downloadFile(name, content, type) {
       const a = document.createElement('a');
@@ -2753,20 +3058,22 @@
       if (CFG.ejsSvc) document.getElementById('ej-svc').value = CFG.ejsSvc;
       if (CFG.ejsTpl) document.getElementById('ej-tpl').value = CFG.ejsTpl;
       if (CFG.ejsKey) document.getElementById('ej-key').value = CFG.ejsKey;
+      if (CFG.uniName) document.getElementById('cfg-uniName').value = CFG.uniName;
+      if (CFG.faculty) document.getElementById('cfg-faculty').value = CFG.faculty;
+      if (CFG.dept) document.getElementById('cfg-dept').value = CFG.dept;
+      if (CFG.registrar) document.getElementById('cfg-registrar').value = CFG.registrar;
+      document.getElementById('cfg-watermark').value = CFG.watermark || 'OFFICIAL DOCUMENT';
     }
     function saveGSURL() {
       const url = document.getElementById('gs-url').value.trim();
       if (!url.startsWith('https://')) { showMsg('gs-msg', 'error', 'Enter a valid HTTPS URL.'); return }
-      CFG.gsURL = url; localStorage.setItem('AT_GS_URL', url);
-      showMsg('gs-msg', 'success', '✅ Google Sheets URL saved.');
+      CFG.gsURL = url; localStorage.setItem('AT_GS_URL', url); showMsg('gs-msg', 'success', '✅ Google Sheets URL saved.');
     }
     function saveEmailJS() {
       CFG.ejsSvc = document.getElementById('ej-svc').value.trim();
       CFG.ejsTpl = document.getElementById('ej-tpl').value.trim();
       CFG.ejsKey = document.getElementById('ej-key').value.trim();
-      localStorage.setItem('AT_EJS_SVC', CFG.ejsSvc);
-      localStorage.setItem('AT_EJS_TPL', CFG.ejsTpl);
-      localStorage.setItem('AT_EJS_KEY', CFG.ejsKey);
+      localStorage.setItem('AT_EJS_SVC', CFG.ejsSvc); localStorage.setItem('AT_EJS_TPL', CFG.ejsTpl); localStorage.setItem('AT_EJS_KEY', CFG.ejsKey);
       showMsg('ej-msg', 'success', '✅ Email config saved.');
     }
     function copyScript() {
@@ -2778,7 +3085,6 @@
     function nextTick(fn) { setTimeout(fn, 60) }
     function destroyCharts() { Object.values(Charts).forEach(c => { try { c.destroy() } catch (e) { } }); Charts = {} }
     function destroyChart(id) { if (Charts[id]) { try { Charts[id].destroy() } catch (e) { } delete Charts[id] } }
-
     function drawGPATrend(id, labels, data) {
       const ctx = document.getElementById(id)?.getContext('2d'); if (!ctx) return;
       Charts[id] = new Chart(ctx, { type: 'line', data: { labels, datasets: [{ label: 'GPA', data, borderColor: '#0c2d5e', backgroundColor: 'rgba(12,45,94,.08)', tension: .3, pointBackgroundColor: '#c8941a', pointRadius: 5, fill: true }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { min: 0, max: 5, grid: { color: '#e5e7eb' }, ticks: { font: { size: 10 } } }, x: { grid: { display: false }, ticks: { font: { size: 10 } } } } } });
@@ -2803,7 +3109,6 @@
       <td>${c.point}</td></tr>`).join('')}
     </tbody></table></div>`;
     }
-
     function statCard(icon, label, value, sub, delta, color) {
       const colors = { navy: '#dbeafe', gold: '#fef3c7', green: '#dcfce7', teal: '#d1fae5', warn: '#fef3c7' };
       return `<div class="stat-card">
@@ -2813,18 +3118,20 @@
     <div style="font-size:11px;color:var(--muted);margin-top:2px">${sub}</div>
   </div>`;
     }
-
     function showMsg(id, type, html) {
       const el = document.getElementById(id); if (!el) return;
       const cls = { success: 'al-success', error: 'al-error', info: 'al-info', warn: 'al-warn' }[type] || 'al-info';
       el.innerHTML = `<div class="alert ${cls}">${html}</div>`;
     }
-
     function toggleSidebar() { document.getElementById('app').classList.toggle('sidebar-open') }
     function closeSidebar() { document.getElementById('app').classList.remove('sidebar-open') }
     document.addEventListener('click', e => {
       const np = document.getElementById('notif-panel');
       if (np && np.classList.contains('open') && !np.contains(e.target) && !e.target.classList.contains('tb-notif')) np.classList.remove('open');
+      const rm = document.getElementById('reject-modal');
+      if (rm && rm.classList.contains('open') && e.target === rm) closeRejectModal();
+      const sm = document.getElementById('share-modal');
+      if (sm && sm.classList.contains('open') && e.target === sm) sm.classList.remove('open');
     });
 
     // ════ INIT ════
